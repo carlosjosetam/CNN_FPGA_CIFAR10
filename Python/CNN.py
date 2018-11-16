@@ -1,11 +1,22 @@
 from math import *
-x = 512
-y = 512
-print('P2')
-print(x, y)
-print(255)
-for j in range(y):
-	for i in range(x):
-		print(i)
+import pprint
+from print_matrix import *
 
 
+h = 3
+w = 4
+d = 2
+
+A = [[[0 for k in xrange(h)] for j in xrange(w)] for i in xrange(d)]
+
+# h x w x d
+
+A[0][1][1] = 1
+
+print A
+pprint.pprint(A)
+print_matrix(A)
+
+print "len(A)", len(A)
+print "len(A[0])", len(A[0])
+print "len(A[0][0])", len(A[0][0])
