@@ -63,3 +63,4 @@ def convolution(M, F, B) :
 
 
     print_matrix(aux_filter)
+    return aux_filter;
