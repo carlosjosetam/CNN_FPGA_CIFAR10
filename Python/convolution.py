@@ -10,14 +10,16 @@ def create_border(M, value) :
     w = len(M[0])
     h = len(M[0][0])
     #create border of zeros
-    M_border = [[[0 for k in xrange(h+2)] for j in xrange(w+2)] for i in xrange(d)]
+    print "d, w, h ", d, w, h
+    M_border = [[[0 for j in xrange(h+2)] for i in xrange(w+2)] for k in xrange(d)]
     for k in range(d):
-        for j in range(w+1):
-            for i in range(h+1):
-                if (i == 0 or i == h+1 or j == 0 or j == w+1):
-                    M_border[k][j][i] = value
+        for j in range(h+1):
+            for i in range(w+1):
+                if (i == 0 or i == w+1 or j == 0 or j == h+1):
+                    M_border[k][i][j] = value
                 else:
-                    M_border[k][j][i] = M[k][j-1][i-1]
+
+                    M_border[k][i][j] = M[k][i-1][j-1]
 
     return M_border
 
@@ -26,41 +28,49 @@ def convolution(M, F, B) :
     w = len(M[0])
     h = len(M[0][0])
 
+    print "d, w, h ", d, w, h
+
     c = len(F)
     fw = len(F[0][0])
     fh = len(F[0][0][0])
 
+    print "c, fw, fh ", c, fw, fh
+
     #verificar tamanho das matrizes
-    print_matrix(M)
+    #print_matrix(M)
     M_border = create_border(M, 0)
-    print_matrix(M_border)
+    #print_matrix(M_border)
 
 
 
 
     aux = 0
-    aux_filter = [[[0 for k in xrange(h)] for j in xrange(w)] for i in xrange(c)]
+    aux_filter = [[[0 for j in xrange(h)] for i in xrange(w)] for k in xrange(c)]
 
 
     #for loop
     for l in range(c):
-        aux_filter[l] = [[0 for k in xrange(h)] for j in xrange(w)]
+        aux_filter[l] = [[0 for j in xrange(h)] for i in xrange(w)]
+	print len(aux_filter[0])
+	
 
         #filter number l
         for k in range(d):
-            for j in range(1, w+1):
-                for i in range(1, h+1):
+	    print "l, k", l, k
+            for j in range(1, h+1):
+                for i in range(1, w+1):
                     #multiplication of matrix
                     aux = 0
                     for b in range(fw):
                         for a in range(fh):
-                            aux += F[l][k][b][a]*M_border[k][j-1+b][i-1+a]
-                    aux_filter[l][j-1][i-1] += aux
+			    for ab in range(fh):
+                            	aux += F[l][k][b][ab]*M_border[k][i-1+ab][j-1+a]
+                    aux_filter[l][i-1][j-1] += aux
         # add bias
-        for j in range(1, w+1):
-            for i in range(1, h+1):
-                aux_filter[l][j-1][i-1] += B[l]
+        for j in range(1, h+1):
+            for i in range(1, w+1):
+                aux_filter[l][i-1][j-1] += B[l]
 
 
-    print_matrix(aux_filter)
+    #print_matrix(aux_filter)
     return aux_filter;
