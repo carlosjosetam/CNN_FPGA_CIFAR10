@@ -5,6 +5,7 @@ from relu import *
 from convolution import *
 from open_image import *
 #oi
+#olar
 
 
 h = 3
