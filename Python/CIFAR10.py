@@ -8,89 +8,103 @@ from maxpool import *
 
 test = 0
 
-# Create MATRIX
-#A = [[0 for j in xrange(h)] for i in xrange(w)]
+# This algorithm is going to instanciate the CNN
+# CIFAR10 for detecting images.
+# At the end, we will have a vector of size 10
+# that will give the propabilities that the image given
+# is in each of the classes proposed.
+# The function CIFAR10_predict receives an image of size
+# 24 x 24 x 3 and return a vector of size 10.
+# It receives as well the vector that contains The
+# filters and bias of each step (dictionary)
 
-# Acess matrix
-# A [i] [j]
-# A [column] [row]
+def CIFAR10_load(path) :
+	# this function reads from a text file
+	# located in path and creates the structure of
+	# our CNN CIFAR10_data
 
-h = 3
-w = 4
-d = 2
+	print "==> CREATING CNN STRUCTURE FROM PATH: ", path, " (TEST !!) \n"
 
-fh = 3
-fw = 3
-c = 2
+	CIFAR10_data = {}
 
-stride = 2
-size = 3
+	CIFAR10_data["name"] = "CIFAR10 V 1.2.0.1"
 
-# RUN TEST
-if test == 1:
-	print "==> starting test\n"
+	# CONVOLUTION 1 | 3x3 x 3x64
+	CIFAR10_data["WEIGHTS_CONV_1"] = [[[[1 for k in xrange(3)] for j in xrange(3)] for i in xrange(3)] for i in xrange(64)]
+	CIFAR10_data["BIAS_CONV_1"] = [0 for k in xrange(64)]
 
-	A = [[1 for j in xrange(h)] for i in xrange(w)]
-	F = [[[[1 for k in xrange(fh)] for j in xrange(fw)] for i in xrange(d)] for i in xrange(1)]
-	B = [0]
+	# MAX_POOL 1
+	CIFAR10_data["SIZE_STRIDE_MAX_POOL_1"] = [3, 3, 2, 2]
 
-	print A
+	# CONVOLUTION 2 | 3x3 x 64x32
+	CIFAR10_data["WEIGHTS_CONV_2"] = [[[[1 for k in xrange(3)] for j in xrange(3)] for i in xrange(64)] for i in xrange(32)]
+	CIFAR10_data["BIAS_CONV_2"] = [0 for k in xrange(32)]
 
-	image_out = convolution([A], F, B)
+	# MAX_POOL 2
+	CIFAR10_data["SIZE_STRIDE_MAX_POOL_3"] = [3, 3, 2, 2]
 
-	print "==> CONVOLUTION\n"
-	print image_out[0]
+	# CONVOLUTION 3 | 3x3 x 32x20
+	CIFAR10_data["WEIGHTS_CONV_3"] = [[[[1 for k in xrange(3)] for j in xrange(3)] for i in xrange(32)] for i in xrange(20)]
+	CIFAR10_data["BIAS_CONV_3"] = [0 for k in xrange(20)]
 
-	print "==> RELU\n"
+	# MAX_POOL 3
+	CIFAR10_data["SIZE_STRIDE_MAX_POOL_1"] = [3, 3, 2, 2]
+
+	# RESHAPE
+
+	# PERCEPTRON | 180x10
+	CIFAR10_data["PERCEPTRON"] = [[1 for k in xrange(180)] for j in xrange(10)]
+
+
+	return CIFAR10_data
+
+
+# DEF
+def CIFAR10_predict(I, CIFAR10_data) :
+	print "==> START PREDICTION OF NETWORK ", CIFAR10_data["name"], "\n"
+
+	print "STEP 1 | CONV + RELU + MP"
+	# CONVOLUTION 1
+	image_out = convolution(I, CIFAR10_data["WEIGHTS_CONV_1"], CIFAR10_data["BIAS_CONV_1"])
+	# RELU
 	image_out = relu(image_out)
-	print image_out[0]
 
-	print "==> MAX_POOL\n"
-	image_out = max_pool(image_out, size, stride)
-	print image_out[0]
+ 	# MAX_POOL 1
+	image_out = max_pool(image_out, CIFAR10_data["SIZE_STRIDE_MAX_POOL_1"][0], CIFAR10_data["SIZE_STRIDE_MAX_POOL_1"][2])
 
-	print "==> END test\n"
-	
+	print "STEP 2 | CONV + RELU + MP"
+	# CONVOLUTION 2
+	image_out = convolution(image_out, CIFAR10_data["WEIGHTS_CONV_2"], CIFAR10_data["BIAS_CONV_2"])
+	# RELU
+	image_out = relu(image_out)
 
-#print_matrix(max_pool(A,size,stride))
+ 	# MAX_POOL 2
+	image_out = max_pool(image_out, CIFAR10_data["SIZE_STRIDE_MAX_POOL_2"][0], CIFAR10_data["SIZE_STRIDE_MAX_POOL_2"][2])
 
+	print "STEP 3 | CONV + RELU + MP"
+	# CONVOLUTION 3
+	image_out = convolution(image_out, CIFAR10_data["WEIGHTS_CONV_3"], CIFAR10_data["BIAS_CONV_3"])
+	# RELU
+	image_out = relu(image_out)
 
-# READ FILE PPM
-I = read_ppm("bab.ppm");
-fh = 3
-fw = 3
-c = 1
-d = 3
-F = [[[[1 for k in xrange(fh)] for j in xrange(fw)] for i in xrange(d)] for i in xrange(c)]
-print F
-B = [0]
+ 	# MAX_POOL 3
+	image_out = max_pool(image_out, CIFAR10_data["SIZE_STRIDE_MAX_POOL_3"][0], CIFAR10_data["SIZE_STRIDE_MAX_POOL_3"][2])
 
-image_out = convolution(I, F, B);
-image_out = relu(image_out)
-image_out = max_pool(image_out, size, stride)
+	print "RESHAPE"
+	# RESHAPE
+	#image_out = reshape(image_out)
 
-image_out = image_out[0];
-
-
+	return image_out
 
 
-# WRITE FILE PPM
-# open file for writing
-filename = 'out_pgm_relu_maxpool.pgm'
-fout=open(filename, 'wb')
 
-# define PGM Header
-w = len(image_out)
-h = len(image_out[0])
-print "size image", w, h
-ppmHeader = 'P2' + ' ' + str(w) + ' ' + str(h) + ' ' + str(255) +  '\n'
-ppmHeader_byte = bytearray(ppmHeader,'utf-8')
-# write the header to the file
-fout.write(ppmHeader_byte)
 
-for j in range(h):
-        for i in range(w):
-    	    fout.write(str(image_out[i][j]))
-    	    fout.write("\n")
 
-fout.close()
+
+
+
+
+
+
+
+	#
