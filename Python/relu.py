@@ -1,20 +1,14 @@
-def relu(matrix):
-	#import array as arr
-	#matriz = []
-	#for x in y:
-	#	a.append(x)
-	#matriz = np.array(a)
+def relu(M):
 
-	h = len(matrix)
-	w = len(matrix[0])
-	d = len(matrix[0][0])
-	#length = 
-	#width = 
-		
+	d = len(M)
+    	w = len(M[0])
+    	h = len(M[0][0])
+	
+	for k in range(d):
+		for j in range(h):
+		        for i in range(w):	
+				if M[k][i][j] < 0:
+					M[k][i][j] = 0
 
-	for i in range(h):
-		for j in range(w):
-			for k in range(d):
-				if matrix[i][j][k] < 0:
-					matrix[i][j][k] = 0
+	return M
 

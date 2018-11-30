@@ -63,8 +63,7 @@ def convolution(M, F, B) :
                     aux = 0
                     for b in range(fw):
                         for a in range(fh):
-			    for ab in range(fh):
-                            	aux += F[l][k][b][ab]*M_border[k][i-1+ab][j-1+a]
+                          	aux += F[l][k][a][b]*M_border[k][i-1+a][j-1+b]
                     aux_filter[l][i-1][j-1] += aux
         # add bias
         for j in range(1, h+1):
@@ -74,3 +73,14 @@ def convolution(M, F, B) :
 
     #print_matrix(aux_filter)
     return aux_filter;
+
+
+
+
+
+
+
+
+
+
+
