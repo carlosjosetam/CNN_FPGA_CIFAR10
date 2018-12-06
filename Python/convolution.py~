@@ -35,7 +35,7 @@ def convolution(M, F, B) :
     #fh = len(F[0][0])
     c = len(F[0][0][0])
 
-    print "c, fw, fh ", c, fw, fh
+    print "c, fw, fh ", c, fw, fh, fo
 
     #verificar tamanho das matrizes
     #print_matrix(M)

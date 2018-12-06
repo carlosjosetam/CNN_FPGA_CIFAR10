@@ -6,7 +6,6 @@ from convolution import *
 from open_image import *
 from maxpool import *
 from CNN_coeff_3x3 import *
-from reshape import *
 
 test = 0
 

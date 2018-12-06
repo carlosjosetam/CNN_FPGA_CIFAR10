@@ -19,7 +19,7 @@ test = 0
 # A [i] [j]
 # A [column] [row]
 
-print "\n==> starting program CNN.py"
+print "==> starting program CNN.py"
 
 # load data from CNN file coeff
 CIFAR10_data = CIFAR10_load("test123.txt");

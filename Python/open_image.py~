@@ -48,7 +48,7 @@ def read_ppm(path):
     raster = [[[0 for j in xrange(h)] for i in xrange(w)] for k in xrange(3)]
 
     line = f.readline().split()
-    #print len(line)
+    print len(line)
     aux = 0
 
     
