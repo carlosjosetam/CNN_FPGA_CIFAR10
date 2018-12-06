@@ -5,6 +5,9 @@ from relu import *
 from convolution import *
 from open_image import *
 from maxpool import *
+from PIL import Image
+from numpy import array
+from reshape import *
 
 test = 0
 
@@ -72,7 +75,18 @@ image_out = max_pool(image_out, size, stride)
 image_out = image_out[0];
 
 
+#testing reshape
 
+
+imginit = Image.open("../cifar10_voilier.png")
+arr = array(imginit)
+img = reshape(arr)
+
+img = Image.fromarray(img)
+img.save("out_reshape.png")
+
+
+#end testing reshape
 
 # WRITE FILE PPM
 # open file for writing
