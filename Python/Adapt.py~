@@ -1,30 +1,69 @@
 from print_matrix import *
 from open_image import *
 
+print_log = 0
+resize = 0
+normalize = 1
+
 #begin of the adapt
 def adapt(M):
 
 	d = len(M)
     	w = len(M[0])
     	h = len(M[0][0])
-	
-	R = [[[0 for j in xrange(24)] for i in xrange(24)] for k in xrange(d)] 		#creation of an matrix of 0 of size 24x24 
-	auxw = 4									#offsets to be in the center of the image
-	auxwend = w-4
-	auxh = 4
-	auxhend = h-4
-	a = 0										#variable to go through the new image
-	b = 0
-	for k in range(d):
-		for j in range(auxw, auxwend):
-		        for i in range(auxh,auxhend):
-			
-				R[k][a][b] = M[k][i][j]
-				a = a+1
-			
-			b = b+1
-			a = 0
+
+	R = M
+
+	if resize :	
+
+	#creation of an matrix of 0 of size 24x24 
+		R = [[[0 for j in xrange(24)] for i in xrange(24)] for k in xrange(d)] 		
+
+	#offsets to be in the center of the image
+		auxw = 4									
+		auxwend = w-4
+		auxh = 4
+		auxhend = h-4
+
+	#variable to go through the new image
+		a = 0										
 		b = 0
+		for k in range(d):
+			for j in range(auxw, auxwend):
+				for i in range(auxh,auxhend):
+					R[k][a][b] = M[k][i][j]
+					a = a+1
+				b = b+1
+				a = 0
+			b = 0
+
+		if print_log:
+			print "adapt : returning image of size 24x24"
+	
+	if normalize :
+		if print_log:
+			print "normalizing"
+
+		for k in range(d):
+			u = 0
+			# average
+			for j in range(24):
+				  for i in range(24):
+					u += R[k][i][j]
+			avg = u/24/24
+
+			#standart
+			u = 0
+			for j in range(24):
+				  for i in range(24):
+					u += (R[k][i][j] - avg) * (R[k][i][j] - avg)
+			std_dev = (u/24/24) ** 0.5
+
+			#new pixel
+			for j in range(24):
+				  for i in range(24):
+					R[k][a][b] = (R[k][i][j] - avg)/max(std_dev, (1/24 ** 0.5))
+
 	return R
 
 

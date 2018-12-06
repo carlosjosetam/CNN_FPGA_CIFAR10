@@ -8,13 +8,12 @@ from maxpool import *
 from PIL import Image
 from numpy import array
 from reshape import *
-<<<<<<< HEAD
 from CIFAR10 import *
-=======
 from Adapt import *
->>>>>>> bdba6e9e657f49182d336de02db86aeda9baf22c
+from labels import *
 
 test = 0
+print_log = 0
 
 # Create MATRIX
 #A = [[0 for j in xrange(h)] for i in xrange(w)]
@@ -23,23 +22,50 @@ test = 0
 # A [i] [j]
 # A [column] [row]
 
-<<<<<<< HEAD
-print "==> starting program CNN.py"
+names = ["airplane",
+	"automobile",
+	"bird",
+	"cat",
+	"deer",
+	"dog",
+	"frog",
+	"horse",
+	"ship",
+	"truck"]
+
+print "\n==> starting program CNN.py"
 
 # load data from CNN file coeff
-CIFAR10_data = CIFAR10_load("test123.txt");
+CIFAR10_data = CIFAR10_load("CNN_coeff_3x3.py");
 
-# READ FILE PPM
-I = read_ppm("Source/cifar10_voilier.ppm");
+nb_images = 1000
+error = 0
 
-# Adapt
+for i in range(nb_images) :
+	# READ FILE PPM
+	image_name = "image_" + str(i) + "_4.ppm"
+	I = read_ppm("images/" + image_name)
 
-# predict image
-predict = CIFAR10_predict(I, CIFAR10_data);
+	# Adapt
+	I = adapt(I);
 
-# print predict to file
-print "==> PREDICTION: \n"
-print predict
+	# predict image
+	predict = CIFAR10_predict(I, CIFAR10_data);
+
+	# print predict to file
+	if print_log :
+		print "== > probability:"
+		for elem in predict :
+			print elem
+
+	max_index = predict.index(max(predict))
+
+	print image_name, "image", i, "==> it's a", names[max_index], "| label:", names[labels[i]]
+	if labels[i] != max_index :
+		error += 1
+	if i != 0 :
+		print "error_rate:", error/float(i)
+
 
 
 
@@ -100,8 +126,6 @@ if test == 1:
 
 	fout.close()
 
-=======
->>>>>>> bdba6e9e657f49182d336de02db86aeda9baf22c
 h = 3
 w = 4
 d = 2
@@ -138,60 +162,3 @@ if test == 1:
 
 	print "==> END test\n"
 	
-<<<<<<< HEAD
-=======
-
-#print_matrix(max_pool(A,size,stride))
-
-
-# READ FILE PPM
-I = read_ppm("bab.ppm");
-fh = 3
-fw = 3
-c = 1
-d = 3
-F = [[[[1 for k in xrange(fh)] for j in xrange(fw)] for i in xrange(d)] for i in xrange(c)]
-print F
-B = [0]
-
-image_out = convolution(I, F, B);
-image_out = relu(image_out)
-image_out = max_pool(image_out, size, stride)
-
-image_out = image_out[0];
-
-
-#testing reshape
-
-
-imginit = Image.open("../cifar10_voilier.png")
-arr = array(imginit)
-img = adapt(arr)
-
-img = Image.fromarray(img)
-img.save("out_reshape.png")
-
-
-#end testing reshape
-
-# WRITE FILE PPM
-# open file for writing
-filename = 'out_pgm_relu_maxpool.pgm'
-fout=open(filename, 'wb')
-
-# define PGM Header
-w = len(image_out)
-h = len(image_out[0])
-print "size image", w, h
-ppmHeader = 'P2' + ' ' + str(w) + ' ' + str(h) + ' ' + str(255) +  '\n'
-ppmHeader_byte = bytearray(ppmHeader,'utf-8')
-# write the header to the file
-fout.write(ppmHeader_byte)
-
-for j in range(h):
-        for i in range(w):
-    	    fout.write(str(image_out[i][j]))
-    	    fout.write("\n")
-
-fout.close()
->>>>>>> bdba6e9e657f49182d336de02db86aeda9baf22c

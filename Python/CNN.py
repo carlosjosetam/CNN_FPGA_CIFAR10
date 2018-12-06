@@ -9,8 +9,11 @@ from PIL import Image
 from numpy import array
 from reshape import *
 from CIFAR10 import *
+from Adapt import *
+from labels import *
 
 test = 0
+print_log = 0
 
 # Create MATRIX
 #A = [[0 for j in xrange(h)] for i in xrange(w)]
@@ -19,22 +22,50 @@ test = 0
 # A [i] [j]
 # A [column] [row]
 
+names = ["airplane",
+	"automobile",
+	"bird",
+	"cat",
+	"deer",
+	"dog",
+	"frog",
+	"horse",
+	"ship",
+	"truck"]
+
 print "\n==> starting program CNN.py"
 
 # load data from CNN file coeff
-CIFAR10_data = CIFAR10_load("test123.txt");
+CIFAR10_data = CIFAR10_load("CNN_coeff_3x3.py");
 
-# READ FILE PPM
-I = read_ppm("Source/cifar10_voilier.ppm");
+nb_images = 1000
+error = 0
 
-# Adapt
+for i in range(nb_images) :
+	# READ FILE PPM
+	image_name = "image_" + str(i) + "_4.ppm"
+	I = read_ppm("images/" + image_name)
 
-# predict image
-predict = CIFAR10_predict(I, CIFAR10_data);
+	# Adapt
+	I = adapt(I);
 
-# print predict to file
-print "==> PREDICTION: \n"
-print predict
+	# predict image
+	predict = CIFAR10_predict(I, CIFAR10_data);
+
+	# print predict to file
+	if print_log :
+		print "== > probability:"
+		for elem in predict :
+			print elem
+
+	max_index = predict.index(max(predict))
+
+	print image_name, "==> it's a", names[max_index], "| label:", names[labels[i]]
+	if labels[i] != max_index :
+		error += 1
+	if i != 0 :
+		print "error_rate:", error/float(i)
+
 
 
 

@@ -14,5 +14,8 @@ def reshape(M):
 		        for i in range(w):	
 				R[aux] = M[k][i][j]
 				aux = aux + 1
-	return M
+	return R
+
+
+
 

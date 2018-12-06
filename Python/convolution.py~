@@ -3,6 +3,7 @@
 # and a vector bias B[c]
 from print_matrix import *
 
+print_log = 0
 
 def create_border(M, value) :
     #create border with value
@@ -35,7 +36,8 @@ def convolution(M, F, B) :
     #fh = len(F[0][0])
     c = len(F[0][0][0])
 
-    print "c, fw, fh ", c, fw, fh, fo
+    if print_log:
+    	print "convolution : c, fw, fh ", c, fw, fh
 
     #verificar tamanho das matrizes
     #print_matrix(M)

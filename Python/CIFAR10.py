@@ -7,7 +7,9 @@ from open_image import *
 from maxpool import *
 from CNN_coeff_3x3 import *
 from reshape import *
+from perceptron import *
 
+print_log = 0
 test = 0
 
 # This algorithm is going to instanciate the CNN
@@ -25,7 +27,7 @@ def CIFAR10_load(path) :
 	# located in path and creates the structure of
 	# our CNN CIFAR10_data
 
-	print "==> CREATING CNN STRUCTURE FROM PATH: ", path, " (TEST !!) \n"
+	print "==> CREATING CNN STRUCTURE FROM PATH:", path, "\n"
 
 	CIFAR10_data["name"] = "CIFAR10 V 1.2.0.1"
 
@@ -59,9 +61,11 @@ def CIFAR10_load(path) :
 
 # DEF
 def CIFAR10_predict(I, CIFAR10_data) :
-	print "==> START PREDICTION OF NETWORK ", CIFAR10_data["name"], "\n"
+	if print_log :
+		print "==> START PREDICTION OF NETWORK ", CIFAR10_data["name"], "\n"
 
-	print "STEP 1 | CONV + RELU + MP"
+	if print_log :
+		print "STEP 1 | CONV + RELU + MP"
 	# CONVOLUTION 1
 	image_out = convolution(I, CIFAR10_data["WEIGHTS_CONV_1"], CIFAR10_data["BIAS_CONV_1"])
 	# RELU
@@ -70,7 +74,8 @@ def CIFAR10_predict(I, CIFAR10_data) :
  	# MAX_POOL 1
 	image_out = max_pool(image_out, CIFAR10_data["SIZE_STRIDE_MAX_POOL_1"][0], CIFAR10_data["SIZE_STRIDE_MAX_POOL_1"][2])
 
-	print "STEP 2 | CONV + RELU + MP"
+	if print_log :
+		print "STEP 2 | CONV + RELU + MP"
 	# CONVOLUTION 2
 	image_out = convolution(image_out, CIFAR10_data["WEIGHTS_CONV_2"], CIFAR10_data["BIAS_CONV_2"])
 	# RELU
@@ -79,7 +84,8 @@ def CIFAR10_predict(I, CIFAR10_data) :
  	# MAX_POOL 2
 	image_out = max_pool(image_out, CIFAR10_data["SIZE_STRIDE_MAX_POOL_2"][0], CIFAR10_data["SIZE_STRIDE_MAX_POOL_2"][2])
 
-	print "STEP 3 | CONV + RELU + MP"
+	if print_log :
+		print "STEP 3 | CONV + RELU + MP"
 	# CONVOLUTION 3
 	image_out = convolution(image_out, CIFAR10_data["WEIGHTS_CONV_3"], CIFAR10_data["BIAS_CONV_3"])
 	# RELU
@@ -88,13 +94,16 @@ def CIFAR10_predict(I, CIFAR10_data) :
  	# MAX_POOL 3
 	image_out = max_pool(image_out, CIFAR10_data["SIZE_STRIDE_MAX_POOL_3"][0], CIFAR10_data["SIZE_STRIDE_MAX_POOL_3"][2])
 
-	print "RESHAPE\n"
+	if print_log :
+		print "RESHAPE"
 	# RESHAPE
-	image_out = reshape(image_out)
+	vector = reshape(image_out)
 
-	print "PERCEPTRON\n"
+	if print_log :
+		print "PERCEPTRON\n"
+	prob = perceptron(vector, CIFAR10_data["PERCEPTRON_WEIGHT"], CIFAR10_data["PERCEPTRON_BIAS"])
 
-	return image_out
+	return prob
 
 
 

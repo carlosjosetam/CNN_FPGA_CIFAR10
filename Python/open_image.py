@@ -5,6 +5,7 @@
 # A [i] [j]
 # A [column] [row]
 
+print_log = 0
 
 def read_pgm(path):
     """Return a raster of integers from a PGM as a list of lists."""
@@ -35,15 +36,19 @@ def read_pgm(path):
 
 def read_ppm(path):
     """Return a raster of integers from a PGM as a list of lists."""
-    print "read_ppm : opening image from", path
+    if print_log:
+		print "read_ppm : opening image from", path
     f = open(path, 'rb')
 
-    assert f.readline() == 'P3\n'
-    (w, h) = [int(i) for i in f.readline().split()]
-    depth = int(f.readline())
+    line = f.readline().split()
+    assert line[0] == 'P3'
+    w = int(line[1])
+    h = int(line[2])
+    depth = int(line[3])
     assert depth <= 255
 
-    print "size (w,h) = (", w, ",", h, ")"
+    if print_log:
+		print "size (w,h) = (", w, ",", h, ")"
    
     raster = [[[0 for j in xrange(h)] for i in xrange(w)] for k in xrange(3)]
 
