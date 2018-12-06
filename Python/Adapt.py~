@@ -8,17 +8,12 @@ def adapt(M):
     	w = len(M[0])
     	h = len(M[0][0])
 	
-#creation of an matrix of 0 of size 24x24 
-	R = [[[0 for j in xrange(24)] for i in xrange(24)] for k in xrange(d)] 		
-
-#offsets to be in the center of the image
-	auxw = 4									
+	R = [[[0 for j in xrange(24)] for i in xrange(24)] for k in xrange(d)] 		#creation of an matrix of 0 of size 24x24 
+	auxw = 4									#offsets to be in the center of the image
 	auxwend = w-4
 	auxh = 4
 	auxhend = h-4
-
-#variable to go through the new image
-	a = 0										
+	a = 0										#variable to go through the new image
 	b = 0
 	for k in range(d):
 		for j in range(auxw, auxwend):
