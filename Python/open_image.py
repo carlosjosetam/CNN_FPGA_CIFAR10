@@ -35,7 +35,7 @@ def read_pgm(path):
     return raster
 
 def read_ppm(path):
-    """Return a raster of integers from a PGM as a list of lists."""
+    """Return a raster of integers from a PPM as a list of lists."""
     if print_log:
 		print "read_ppm : opening image from", path
     f = open(path, 'rb')
@@ -56,7 +56,6 @@ def read_ppm(path):
     #print len(line)
     aux = 0
 
-    
     for j in range(h):
 	for i in range(w):
 		for k in range (3):

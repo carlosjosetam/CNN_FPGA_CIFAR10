@@ -40,9 +40,11 @@ def read_ppm(path):
 		print "read_ppm : opening image from", path
     f = open(path, 'rb')
 
-    #assert f.readline() == 'P3\n'
-    (trash, w, h) = [int(i) for i in f.readline().split()]
-    depth = int(f.readline())
+    line = f.readline().split()
+    assert line[0] == 'P3'
+    w = int(line[1])
+    h = int(line[2])
+    depth = int(line[3])
     assert depth <= 255
 
     if print_log:
