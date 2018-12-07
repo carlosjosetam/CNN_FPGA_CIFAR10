@@ -21,6 +21,6 @@ def perceptron (V, P, B) :
 		for j in range(len(Prob)) :
 			u += expm1(Prob[j])
 
-		Prob[i] = expm1(Prob[i])/u
+		Prob[i] = expm1(Prob[i])/float(u)
 
 	return Prob

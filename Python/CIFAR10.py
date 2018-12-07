@@ -5,9 +5,10 @@ from relu import *
 from convolution import *
 from open_image import *
 from maxpool import *
-from CNN_coeff_3x3 import *
+#from CNN_coeff_3x3 import *
 from reshape import *
 from perceptron import *
+from CNN_coeff_5x5 import *
 
 print_log = 0
 test = 0
@@ -25,7 +26,7 @@ test = 0
 def CIFAR10_load(path) :
 	# this function reads from a text file
 	# located in path and creates the structure of
-	# our CNN CIFAR10_data
+	# our CNN CIFAR10_data    
 
 	print "==> CREATING CNN STRUCTURE FROM PATH:", path, "\n"
 

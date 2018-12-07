@@ -15,6 +15,8 @@ from labels import *
 test = 1
 print_log = 1
 
+print 8/float(2)/float(3)
+
 # Create MATRIX
 #A = [[0 for j in xrange(h)] for i in xrange(w)]
 
@@ -23,7 +25,7 @@ print_log = 1
 # A [column] [row]
 
 
-h = 3
+h = 5
 w = 4
 d = 2
 
@@ -59,6 +61,22 @@ if test == 1:
 
 	print "==> END test\n"
 	
+# test Adapt
+if test == 1:
+	print "==> starting test Adapt\n"
+
+	A = [[1, 2, 1], [1, 0, 1], [1, 0, 1], [1, 2, 1]]
+
+
+	print A
+
+	image_out = adapt([A])
+
+	print "==> Adapt\n"
+	print image_out
+
+	print "==> END test Adapt\n"
+
 
 #other tests
 

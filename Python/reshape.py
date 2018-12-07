@@ -9,9 +9,9 @@ def reshape(M):
 
 
 	aux = 0
-	for k in range(d):
-		for j in range(h):
-		        for i in range(w):	
+	for i in range(w):
+	        for j in range(h):
+			for k in range(d):	
 				R[aux] = M[k][i][j]
 				aux = aux + 1
 	return R

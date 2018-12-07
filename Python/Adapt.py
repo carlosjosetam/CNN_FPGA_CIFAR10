@@ -39,30 +39,37 @@ def adapt(M):
 
 		if print_log:
 			print "adapt : returning image of size 24x24"
-	
+	d = len(R)
+    	w = len(R[0])
+    	h = len(R[0][0])
+
+	N = w*h*d
+
 	if normalize :
 		if print_log:
 			print "normalizing"
 
+		# average
+		u = 0
 		for k in range(d):
-			u = 0
-			# average
-			for j in range(24):
-				  for i in range(24):
+			for j in range(h):
+				  for i in range(w):
 					u += R[k][i][j]
-			avg = u/24/24
+		avg = u/float(N)
 
-			#standart
-			u = 0
-			for j in range(24):
-				  for i in range(24):
+		#standart
+		u = 0
+		for k in range(d):
+			for j in range(h):
+				  for i in range(w):
 					u += (R[k][i][j] - avg) * (R[k][i][j] - avg)
-			std_dev = (u/24/24) ** 0.5
+		std_dev = (u/float(N)) ** 0.5
 
-			#new pixel
-			for j in range(24):
-				  for i in range(24):
-					R[k][i][j] = (R[k][i][j] - avg)/max(std_dev, (1/24 ** 0.5))
+		#new pixel
+		for k in range(d):
+			for j in range(h):
+				  for i in range(w):
+					R[k][i][j] = (R[k][i][j] - avg)/float(max(std_dev, ((1/float(N)) ** 0.5)))
 
 	return R
 

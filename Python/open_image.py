@@ -56,8 +56,8 @@ def read_ppm(path):
     #print len(line)
     aux = 0
 
-    for j in range(h):
-	for i in range(w):
+    for i in range(w):
+	for j in range(h):
 		for k in range (3):
 		    if (aux == len(line)) :
 			line = f.readline().split()

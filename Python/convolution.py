@@ -66,7 +66,10 @@ def convolution(M, F, B) :
                     aux = 0
                     for b in range(fw):
                         for a in range(fh):
-					aux += F[a][b][k][l]*M_border[k][i-1+a][j-1+b]
+					#print("coeficientes imagem dentro convolucao [i, j] : "), i-1+a, j-1+b
+					#print("coeficientes filtro dentro convolucao [a, b, k, l] : "), a, b, k, l
+					if(i-1+a< w and j-1+b< h):
+						aux += F[a][b][k][l]*M_border[k][i-1+a][j-1+b]
                     aux_filter[l][i-1][j-1] += aux
         # add bias
         for j in range(1, h+1):
