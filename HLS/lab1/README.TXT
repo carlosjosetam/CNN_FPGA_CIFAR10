@@ -1,0 +1,3 @@
+     
+
+This lab goes through the typical steps taken in a Catapult design session.  This includes setting working directories, adding input files, setting the target technology, and generating RTL and output files.  Design optimizations are not covered in this lab, but will be covered later.  The main goal in this lab is for the user to familarize themselves with the Catapult GUI and the steps taken in synthesizing a C++ design. 

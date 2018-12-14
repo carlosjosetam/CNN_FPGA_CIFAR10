@@ -1,0 +1,42 @@
+#
+# Mentor Graphics CatapultC synthesis 2007b University Edition
+#
+export MGC_HOME=/softslin/catapult2011a_62/Mgc_home/
+export LM_LICENSE_FILE=1718@cimeld59
+export PATH="$PATH:${MGC_HOME}/bin"
+
+
+if [ -n "${LM_LICENSE_FILE}" ] ; then
+    export LM_LICENSE_FILE="${LM_LICENSE_FILE}:1718@cimekey1"
+else
+    export LM_LICENSE_FILE="1718@cimekey1"
+fi
+
+# export LD_LIBRARY_PATH="/softslin/lenny-amd64/lib:/softslin/lenny-amd64/usr/lib:/usr/lib:/lib"
+
+#
+# MENTOR GRAPHICS ModelSim version 10.0b in native environement
+#
+
+export MTI_HOME=/softslin/modelsim10_0b/modeltech
+export PATH="$PATH:$MTI_HOME/`$MTI_HOME/vco`"
+
+
+export MODELSIM="${HOME}/projet_caltapultc/modelsim.ini"
+
+#
+# MENTOR GRAPHICS Leonardo 2010a session
+#
+
+export EXEMPLAR=/softslin/leonardo2010a
+
+export PATH="${PATH}:${EXEMPLAR}/bin"
+
+#
+# MENTOR GRAPHICS Precision Synthesis 2010a_2_64b session in 64-bit mode
+#
+
+export PRECISION_HOME=/softslin/precision2010a_2_64b/Mgc_home
+
+export PATH="${PATH}:${PRECISION_HOME}/bin"
+
