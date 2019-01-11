@@ -11,4 +11,3 @@ def relu(M):
 					M[k][i][j] = 0
 
 	return M
-

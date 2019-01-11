@@ -11,7 +11,7 @@
 #define F_C1_WEIGHT_C 64
 #define F_C1_BIASES 64
 #define I_SIZE_INPUT_C1 24
-#define I_LAYERS_INPUT_C1 24 
+#define I_LAYERS_INPUT_C1 3 
 #define I_SIZE_OUTPUT_C1 24
 #define I_LAYERS_OUTPUT_C1 64 
 
