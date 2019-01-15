@@ -29,8 +29,6 @@ void convolution_reference (
 
 	uint8_t aux;
 
-
-	double acc;
 	int add_M = 0;
 	int add_F = 0;
 	int add_AF = 0;

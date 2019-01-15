@@ -20,7 +20,7 @@ using namespace std;
 
 
 
-void convolution_reference (
+void convolution (
 	uint8_t	*M,
 	uint8_t *F,
 	uint8_t	*B,
@@ -111,7 +111,7 @@ void testbench_1() {
 		}
 	}
 	
-	convolution_reference(M, F, B, end_conv);
+	convolution(M, F, B, end_conv);
 	printf("\n\n ------RESULTADO---------\n\n");
 	for(int l=0; l<F_C1_WEIGHT_C; l++){
 		for(int j=0; j<I_SIZE_INPUT_C1; j++){
