@@ -41,7 +41,8 @@ CCS_MAIN(int argc, char *argv) {
 	}
 	
 	for(int l=0; l<F_C1_WEIGHT_C; l++){
-		for(int k=0; k<I_LAYERS_INPUT_C1; k++){					
+		for(int k=0; k<I_LAYERS_INPUT_C1; k++){
+			// sobel filter			
 			add_F = k*(F_SIZE_X*F_SIZE_Y) + l*(F_SIZE_X*F_SIZE_Y*F_C1_WEIGHT_D);	
 			F[add_F] = -1;
 			F[add_F + 1] = 0;
@@ -55,13 +56,20 @@ CCS_MAIN(int argc, char *argv) {
 		}
 	}
 
-	// convolution_reference(M,F,B,end_conv_c);
-	//calling the function convolution
 	CCS_DESIGN(convolution_simple)(M,F,B,end_conv);
-	//convolution_simple(M,F,B,end_conv);
-	//output signal
 
-	//DONT FORGET TO COMPARE THE RTL WITH THE C FUNCTION
+	// create image pgm
+	OUTPUT_SIGNAL << "P3 24 24 255" << endl;
+
+	for(int i=0; i<I_SIZE_INPUT_C1; i++){
+		for(int j=0; j<I_SIZE_INPUT_C1; j++){
+			for(int k=0; k<I_LAYERS_INPUT_C1; k++){
+				add_M = i + j*(I_SIZE_INPUT_C1) + k*(I_SIZE_INPUT_C1*I_SIZE_INPUT_C1);
+				OUTPUT_SIGNAL << end_conv[add_AF] << endl;		
+
+			}
+		}
+	}
 	for(int l=0; l<F_C1_WEIGHT_C; l++){
 		for(int j=0; j<I_SIZE_INPUT_C1; j++){
 			for(int i=0; i<I_SIZE_INPUT_C1; i++){	

@@ -31,9 +31,9 @@
 // log2 64 = 6
 #define INDEX_WIDTH 6
 
-typedef ac_fixed<PIXEL_WIDTH,PIXEL_WIDTH,true,AC_TRN,AC_SAT> pixel_type ;
-typedef ac_fixed<ADDRESS_WIDTH,ADDRESS_WIDTH,true,AC_TRN,AC_SAT> address_type;
-typedef ac_fixed<INDEX_WIDTH,INDEX_WIDTH,true,AC_TRN,AC_SAT> index_type;
+typedef ac_fixed<PIXEL_WIDTH,PIXEL_WIDTH,false,AC_TRN,AC_SAT> pixel_type ;
+typedef ac_fixed<ADDRESS_WIDTH,ADDRESS_WIDTH,false,AC_TRN,AC_SAT> address_type;
+typedef ac_fixed<INDEX_WIDTH,INDEX_WIDTH,false,AC_TRN,AC_SAT> index_type;
 
 // Function Prototypes
 
@@ -53,9 +53,11 @@ void convolution_reference (
 	uint8_t *end_conv
 );
 
+/*/24x24x64
 void max_pool_simple(
+	pixel_type 
 	
-
+*/
 #endif
 
 

@@ -16,15 +16,16 @@ A reference double precision filter for accuracy comparisons to floating point
 #include "stdio.h"
 #include "stdint.h"
 
+
 using namespace std;
 
-void read_image_ppm() {
+void read_image_ppm(char *path, uint8_t *M) {
+	/* this function receives an array of size
+	I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*I_LAYERS_INPUT_C1
+	*/
 	printf("read_image_ppm\n");
 	
-	uint8_t M[I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*I_LAYERS_INPUT_C1];
 	int add_M;	
-
-	printf("%d", I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*I_LAYERS_INPUT_C1);
 
 	// Reading image 24x24
 	char size[10];
@@ -32,7 +33,7 @@ void read_image_ppm() {
 	char temp[10];
 	uint8_t tx, ty;
 	FILE *f;
-	f = fopen("testbench/conv_test_image.ppm", "r");
+	f = fopen(path, "r");
 	if (f == NULL) {
 	    perror("Failed opening image: ");
 	}
@@ -50,7 +51,7 @@ void read_image_ppm() {
 	for(int i=0; i<I_SIZE_INPUT_C1; i++){
 		for(int j=0; j<I_SIZE_INPUT_C1; j++){
 			for(int k=0; k<I_LAYERS_INPUT_C1; k++){
-				add_M = i + j*(I_SIZE_INPUT_C1)+k*(I_SIZE_INPUT_C1*I_SIZE_INPUT_C1);
+				add_M = i + j*(I_SIZE_INPUT_C1) + k*(I_SIZE_INPUT_C1*I_SIZE_INPUT_C1);
 				fscanf(f,"%d", &M[add_M]);
 
 			}
@@ -62,23 +63,14 @@ void read_image_ppm() {
 
 int main () {
 	printf("main\n");
-	read_image_ppm();
+
+	uint8_t M[I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*I_LAYERS_INPUT_C1];
+	int add_M;
+
+	read_image_ppm("testbench/conv_test_image.ppm", M);
 
 	return 0;
 }
-
- 
-/* Matrix index | address
-	M[i][j][k] => M[I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*I_LAYERS_INPUT_C1]
-	
-	add_M = i + j*(I_SIZE_INPUT_C1) + k*(I_SIZE_INPUT_C1*I_SIZE_INPUT_C1)
-*/
-
-/* Filter index | address
-	F[a][b][k][l] => F[F_SIZE_X*F_SIZE_Y*F_C1_WEIGHT_D*F_C1_WEIGHT_C]
-	
-	add_F = a + b*(F_SIZE_X) + k*(F_SIZE_X*F_SIZE_Y) + l*(F_SIZE_X*F_SIZE_Y*F_C1_WEIGHT_D);
-*/
 
 
 
