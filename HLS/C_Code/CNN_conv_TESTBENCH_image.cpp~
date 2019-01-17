@@ -1,11 +1,12 @@
-//
-// Copyright 2003-2015 Mentor Graphics Corporation
-//
-// All Rights Reserved.
-//
-// THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION WHICH IS THE PROPERTY OF 
-// MENTOR GRAPHICS CORPORATION OR ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS.
-// 
+/*
+	Copyright 2003-2015 Mentor Graphics Corporation
+	All Rights Reserved.
+*/
+
+/*
+	CNN TESTBENCH for an image cifar 24*24
+	Applying a countour filter
+*/
 
 #include "CNN_TYPES.h"
 #include "math.h"
@@ -21,30 +22,50 @@ CCS_MAIN(int argc, char *argv) {
 	cout << "Starting Test" << endl ;
 	ofstream OUTPUT_SIGNAL("output_signal.txt");
 
-	printf("testbench_1");
-//declaration of variables of CNN_simple
+	printf("testbench_2: applying filter on a image");
+
+//declaration of variables
 	static pixel_type M[I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*I_LAYERS_INPUT_C1];
 	static pixel_type F[F_SIZE_X*F_SIZE_Y*F_C1_WEIGHT_D*F_C1_WEIGHT_C];
-	static pixel_type B[F_C1_BIASES];
+	static pixel_type	B[F_C1_BIASES];
 	pixel_type end_conv[I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*F_C1_WEIGHT_C] = {0};	
 	int add_M, add_F, add_AF;	
+	uint8_t end_conv_c[I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*F_C1_WEIGHT_C] = {0};
 
-//declaration of variables of CNN_reference
-	uint8_t	M_c[I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*I_LAYERS_INPUT_C1];
-	uint8_t	F_c[F_SIZE_X*F_SIZE_Y*F_C1_WEIGHT_D*F_C1_WEIGHT_C];	
-	uint8_t B_c[F_C1_BIASES];  	
-	uint8_t end_conv_c[I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*F_C1_WEIGHT_C] = {0};	
+// Reading image 24x24
+	char *size;
+	char format[10];
+	char temp[10];
+	uint8_t tx, ty;
+	FILE *f;
+	f = fopen("conv_test_image.ppm", "r");
+	fscanf(f,"%s", format);
+	/* Read line that contains the size */
+	fgets(size, 256, f);
 
-//to compare Simple with reference
-double diff, out_c, out;
-double worst_error = 0;
+	/* Ignore comments */
+	while (size[0]==’#’) fgets(size, 256, f);
 
+	// read size on the string
+	sscanf(size,"%d %d", &tx, &ty);
+	fscanf(f,"%s", temp);
+
+	for(int k=0; k<I_LAYERS_INPUT_C1; k++){
+		for(int j=0; j<I_SIZE_INPUT_C1; j++){
+			for(int i=0; i<I_SIZE_INPUT_C1; i++){	
+				add_M= i + j*(I_SIZE_INPUT_C1)+k*(I_SIZE_INPUT_C1*I_SIZE_INPUT_C1);					
+				M[add_M] = 1;
+			}
+		}
+	}
+
+	for(int i=0;i<tx*ty*;i++) {
+		fscanf(f,"%d", &image[i]);
+	}
 
 //initialization of variables
 	for(int l=0; l<F_C1_BIASES; l++){
 		B[l] = 1;
-		B_c[l] = 1;
-		
 	}	
 
 
@@ -53,7 +74,6 @@ double worst_error = 0;
 			for(int i=0; i<I_SIZE_INPUT_C1; i++){	
 				add_M= i + j*(I_SIZE_INPUT_C1)+k*(I_SIZE_INPUT_C1*I_SIZE_INPUT_C1);					
 				M[add_M] = 1;
-				M_c[add_M] = 1;
 			}
 		}
 	}
@@ -64,13 +84,12 @@ double worst_error = 0;
 				for(int a=0; a<F_SIZE_Y; a++) {
 					add_F = a + b*(F_SIZE_X) + k*(F_SIZE_X*F_SIZE_Y) + l*(F_SIZE_X*F_SIZE_Y*F_C1_WEIGHT_D);	
 					F[add_F] = 1;
-					F_c[add_F] = 1;
 				}
 			}
 		}
 	}
 
-        convolution_reference(M,F,B,end_conv_c);
+   // convolution_reference(M,F,B,end_conv_c);
 //calling the function convolution
 	CCS_DESIGN(convolution_simple)(M,F,B,end_conv);
 	//convolution_simple(M,F,B,end_conv);
@@ -82,17 +101,11 @@ double worst_error = 0;
 			for(int i=0; i<I_SIZE_INPUT_C1; i++){	
 				add_AF = i + j*I_SIZE_INPUT_C1 + l*I_SIZE_INPUT_C1*I_SIZE_INPUT_C1;
 				OUTPUT_SIGNAL << end_conv[add_AF] << endl;		
-				out_c = end_conv_c[add_AF].to_double();
-				out = end_conv[add_AF].to_double();
-				diff = out-out_c;
-				diff = (diff<0) ? -diff : diff;
-				worst_error = (diff > worst_error) ? diff : worst_error;
 			}
 		}
 	}		
 
 	cout << "Convolution Done" << endl ;
-	cout << "Worst error compared with double precision = " << worst_error << endl ;
 	OUTPUT_SIGNAL.close() ;
 	CCS_RETURN(0) ;
 }

@@ -117,7 +117,8 @@ void testbench_1() {
 		for(int j=0; j<I_SIZE_INPUT_C1; j++){
 			for(int i=0; i<I_SIZE_INPUT_C1; i++){	
 				add_AF = i + j*I_SIZE_INPUT_C1 + l*I_SIZE_INPUT_C1*I_SIZE_INPUT_C1;
-				printf(" %d \n", end_conv[add_AF]);		
+				printf(" %d \n", end_conv[add_AF]);	
+					
 			}
 		}
 	}

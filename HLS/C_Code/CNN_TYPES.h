@@ -51,8 +51,13 @@ void convolution_reference (
 	uint8_t *F,
 	uint8_t	*B,
 	uint8_t *end_conv
-) ;
+);
 
+/*/24x24x64
+void max_pool_simple(
+	pixel_type 
+	
+*/
 #endif
 
 

@@ -14,7 +14,7 @@
 #include "define.h"
 
 // 8 bit for each pixel
-#define PIXEL_WIDTH 3
+#define PIXEL_WIDTH 8
 // This headroom determines the additional accuracy of the accumulator. Here we make it full precision for numerical safety
 #define HEADROOM 6
 // ADRESS sizing
@@ -51,7 +51,10 @@ void convolution_reference (
 	uint8_t *F,
 	uint8_t	*B,
 	uint8_t *end_conv
-) ;
+);
+
+void max_pool_simple(
+	
 
 #endif
 
