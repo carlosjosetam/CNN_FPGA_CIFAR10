@@ -33,7 +33,7 @@ void convolution_simple (
 	index_type i, j, k, l, a, b, i_aux, j_aux;
 
 	// initialize end_conv
-	/*INIT_L:for(l=0; l<F_C1_WEIGHT_C; l++){
+	INIT_L:for(l=0; l<F_C1_WEIGHT_C; l++){
 		INIT_J:for(j=0; j<I_SIZE_INPUT_Y; j++){
 			INIT_I:for(i=0; i<I_SIZE_INPUT_X; i++){	
 				add_AF = i + j*I_SIZE_INPUT_X + l*I_SIZE_INPUT_X*I_SIZE_INPUT_Y;
@@ -41,7 +41,7 @@ void convolution_simple (
 			}
 		}
 	}	
-    */
+
 	FOR_L:for(l=0; l<F_C1_WEIGHT_C; l++){
 		FOR_K:for(k=0; k<I_LAYERS_INPUT_C1; k++){
 			FOR_J:for(j=0; j<I_SIZE_INPUT_Y; j++){

@@ -12,8 +12,8 @@
 
 #define F_C1_BIASES 1
 
-#define I_SIZE_INPUT_X 1100
-#define I_SIZE_INPUT_Y 715
+#define I_SIZE_INPUT_X 320
+#define I_SIZE_INPUT_Y 240
 #define I_LAYERS_INPUT_C1 1
 
 // read image
@@ -31,4 +31,3 @@ void read_image_pgm(char *path, double *M);
 
 
 #endif
-

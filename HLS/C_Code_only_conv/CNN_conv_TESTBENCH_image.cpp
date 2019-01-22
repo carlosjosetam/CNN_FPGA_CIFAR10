@@ -112,8 +112,8 @@ CCS_MAIN(int argc, char *argv) {
 	ofstream OUTPUT_SIGNAL("output_image_HLS.pgm");
 	ofstream OUTPUT_SIGNAL_reference("output_image_reference.pgm");
 	// create image pgm
-	OUTPUT_SIGNAL << "P2 1100 715 255" << endl;
-	OUTPUT_SIGNAL_reference << "P2 1100 715 255" << endl;
+	OUTPUT_SIGNAL << "P2 320 240 255" << endl;
+	OUTPUT_SIGNAL_reference << "P2 320 240 255" << endl;
 	
 	for(int l=0; l<F_C1_WEIGHT_C; l++){
 		for(int j=0; j<I_SIZE_INPUT_Y; j++){
