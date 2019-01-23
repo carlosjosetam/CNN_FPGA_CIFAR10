@@ -15,4 +15,4 @@ go extract
 flow package require /SCVerify
 flow run /SCVerify
 flow run /SCVerify/launch_make ./scverify/Verify_rtl_vhdl_msim.mk {} SIMTOOL=msim simgui
-flow run /SCVerify/launch_make ./scverify/Verify_rtl_vhdl_msim.mk {} SIMTOOL=msim simgui
+

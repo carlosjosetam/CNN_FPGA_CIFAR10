@@ -166,8 +166,12 @@ void testbench_1() {
 		for(int j=0; j<I_SIZE_INPUT_Y; j++){
 			for(int i=0; i<I_SIZE_INPUT_X; i++){	
 				add_AF = i + j*I_SIZE_INPUT_X + l*I_SIZE_INPUT_X*I_SIZE_INPUT_Y;
-				//printf("%d\n", end_conv[add_AF]);
-				aux_img = trunc(end_conv[add_AF]);		
+				// printf("%d\n", end_conv[add_AF]);
+				aux_img = end_conv[add_AF];
+				// to erase negative numbers
+				if ( aux_img < 0 ) aux_img = 0;
+
+				// write on file
 				OUTPUT_SIGNAL << aux_img << endl;
 					
 			}

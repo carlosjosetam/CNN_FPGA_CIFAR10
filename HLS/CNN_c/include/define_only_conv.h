@@ -12,12 +12,15 @@
 
 #define F_C1_BIASES 1
 
-#define I_SIZE_INPUT_X 1100
-#define I_SIZE_INPUT_Y 715
+#define I_SIZE_INPUT_X 320
+#define I_SIZE_INPUT_Y 240
 #define I_LAYERS_INPUT_C1 1
 
+#define MP_SIZE 3
+#define MP_STRIDE 2
+
 // read image
-void read_image_pgm(char *path, uint8_t *M);
+void read_image_pgm(char *path, double *M);
 
 /* Matrix index | address
 	M[i][j][k] => M[I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*I_LAYERS_INPUT_C1]
@@ -31,4 +34,3 @@ void read_image_pgm(char *path, uint8_t *M);
 
 
 #endif
-

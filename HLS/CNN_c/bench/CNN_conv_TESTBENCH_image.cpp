@@ -23,7 +23,7 @@ CCS_MAIN(int argc, char *argv) {
 	printf("testbench_1 only conv with image babu.pgm\n");
 
 	pixel_type M[I_SIZE_INPUT_X*I_SIZE_INPUT_Y*I_LAYERS_INPUT_C1];
-	pixel_type F[F_SIZE_X*F_SIZE_Y*F_C1_WEIGHT_D*F_C1_WEIGHT_C];
+	filter_type F[F_SIZE_X*F_SIZE_Y*F_C1_WEIGHT_D*F_C1_WEIGHT_C];
 	pixel_type B[F_C1_BIASES];
 	int aux_img;
 	pixel_type end_conv[I_SIZE_INPUT_X*I_SIZE_INPUT_Y*F_C1_WEIGHT_C];	
@@ -88,14 +88,14 @@ CCS_MAIN(int argc, char *argv) {
 	F[add_F + 8] = 1;
 
 	F_reference[add_F] = -1;
-	F_reference[add_F + 1] = -1;
-	F_reference[add_F + 2] = -1;
-	F_reference[add_F + 3] = -1;
-	F_reference[add_F + 4] = -1;
-	F_reference[add_F + 5] = -1;
+	F_reference[add_F + 1] = 0;
+	F_reference[add_F + 2] = 1;
+	F_reference[add_F + 3] = -2;
+	F_reference[add_F + 4] = 0;
+	F_reference[add_F + 5] = 2;
 	F_reference[add_F + 6] = -1;
-	F_reference[add_F + 7] = -1;
-	F_reference[add_F + 8] = -1;
+	F_reference[add_F + 7] = 0;
+	F_reference[add_F + 8] = 1;
 
 	for(int l=0; l<F_C1_BIASES; l++){
 		B[l] = 0;
@@ -112,8 +112,8 @@ CCS_MAIN(int argc, char *argv) {
 	ofstream OUTPUT_SIGNAL("output_image_HLS.pgm");
 	ofstream OUTPUT_SIGNAL_reference("output_image_reference.pgm");
 	// create image pgm
-	OUTPUT_SIGNAL << "P2 1100 715 255" << endl;
-	OUTPUT_SIGNAL_reference << "P2 1100 715 255" << endl;
+	OUTPUT_SIGNAL << "P2 320 240 255" << endl;
+	OUTPUT_SIGNAL_reference << "P2 320 240 255" << endl;
 	
 	for(int l=0; l<F_C1_WEIGHT_C; l++){
 		for(int j=0; j<I_SIZE_INPUT_Y; j++){

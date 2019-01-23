@@ -1,0 +1,15 @@
+#include "define_only_conv.h"
+#include "stdio.h"
+#include "stdint.h"
+#include "stdlib.h"
+#include <fstream>
+#include <math.h> 
+
+using namespace std;
+
+void Maxpool_reference(int *M)
+{
+	int size = 3,
+	int 
+}
+

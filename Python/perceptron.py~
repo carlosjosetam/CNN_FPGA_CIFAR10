@@ -1,5 +1,5 @@
 # percepton and bias
-from math import exp
+from math import expm1
 
 def perceptron (V, P, B) :
 
@@ -19,8 +19,8 @@ def perceptron (V, P, B) :
 	for i in range(len(Prob)) :
 		u = 0
 		for j in range(len(Prob)) :
-			u += exp(Prob[j])
+			u += expm1(Prob[j])
 
-		Prob[i] = exp(Prob[i])/u
+		Prob[i] = expm1(Prob[i])/float(u)
 
 	return Prob

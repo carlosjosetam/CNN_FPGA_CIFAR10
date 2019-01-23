@@ -20,17 +20,28 @@
 void convolution_simple (
 	pixel_type M[I_SIZE_INPUT_X*I_SIZE_INPUT_Y*I_LAYERS_INPUT_C1],
 	// ATTENTION! RESIZE F coeffs
-	pixel_type F[F_SIZE_X*F_SIZE_Y*F_C1_WEIGHT_D*F_C1_WEIGHT_C],
-	// ATTENTION! RESIZE B coeffs
-	pixel_type end_conv[I_SIZE_INPUT_X*I_SIZE_INPUT_*F_C1_WEIGHT_C]
+	filter_type F[F_SIZE_X*F_SIZE_Y*F_C1_WEIGHT_D*F_C1_WEIGHT_C],
+	pixel_type B[F_C1_BIASES],
+	pixel_type end_conv[I_SIZE_INPUT_X*I_SIZE_INPUT_Y*F_C1_WEIGHT_C]
 ) {
 
-	pixel_type aux;
+	acc_type aux;
 
-    int add_M = 0;
-    int add_F = 0;
-    int add_AF = 0;
-	int i, j, k, l, a, b, i_aux, j_aux;
+	address_type add_M = 0;
+	address_type add_F = 0;
+	address_type add_AF = 0;
+	index_type i, j, k, l, a, b, i_aux, j_aux;
+
+	// initialize end_conv
+	/*INIT_L:for(l=0; l<F_C1_WEIGHT_C; l++){
+		INIT_J:for(j=0; j<I_SIZE_INPUT_Y; j++){
+			INIT_I:for(i=0; i<I_SIZE_INPUT_X; i++){	
+				add_AF = i + j*I_SIZE_INPUT_X + l*I_SIZE_INPUT_X*I_SIZE_INPUT_Y;
+				end_conv[add_AF] = 0;				
+			}
+		}
+	}	
+    */
 	FOR_L:for(l=0; l<F_C1_WEIGHT_C; l++){
 		FOR_K:for(k=0; k<I_LAYERS_INPUT_C1; k++){
 			FOR_J:for(j=0; j<I_SIZE_INPUT_Y; j++){
@@ -50,17 +61,11 @@ void convolution_simple (
 						}
 					}
 					add_AF = i + j*I_SIZE_INPUT_X + l*I_SIZE_INPUT_X*I_SIZE_INPUT_Y;
-					end_conv[add_AF] += aux;		
+					// Warning for end_conv[add_AF] +=	
+					end_conv[add_AF] = aux + B[l];		
 				}				
 			}
-		}
-		FOR_B_J:for(j=0; j<I_SIZE_INPUT_C1; j++){
-			FOR_B_I:for(i=0; i<I_SIZE_INPUT_C1; i++){	
-				add_AF = i + j*I_SIZE_INPUT_X + l*I_SIZE_INPUT_X*I_SIZE_INPUT_Y;
-				end_conv[add_AF] += B[l];
-			}
-		}
-				
+		}				
 	}
 }
 

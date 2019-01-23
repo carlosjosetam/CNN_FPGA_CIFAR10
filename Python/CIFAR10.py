@@ -5,12 +5,12 @@ from relu import *
 from convolution import *
 from open_image import *
 from maxpool import *
-#from CNN_coeff_3x3 import *
+from CNN_coeff_3x3 import *
 from reshape import *
 from perceptron import *
-from CNN_coeff_5x5 import *
+#from CNN_coeff_5x5 import *
 
-print_log = 0
+print_log = 1
 test = 0
 
 # This algorithm is going to instanciate the CNN

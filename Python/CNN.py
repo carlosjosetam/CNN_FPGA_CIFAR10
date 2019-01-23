@@ -36,15 +36,15 @@ names = ["airplane",
 print "\n==> starting program CNN.py"
 
 # load data from CNN file coeff
-CIFAR10_data = CIFAR10_load("CNN_coeff_5x5.py");
+CIFAR10_data = CIFAR10_load("CNN_coeff_3x3.py");
 
 nb_images = 1000
 error = 0
 
-for i in range(nb_images) :
+for i in range(1) :
 	# READ FILE PPM
 	image_name = "image_" + str(i) + "_4.ppm"
-	I = read_ppm("images/" + image_name)
+	I = read_ppm("../images/" + image_name)
 
 	#print_matrix(I)
 
@@ -53,6 +53,9 @@ for i in range(nb_images) :
 
 	# predict image
 	predict = CIFAR10_predict(I, CIFAR10_data);
+	
+	for elem in predict:
+		print elem
 
 	# print predict to file
 	if print_log :

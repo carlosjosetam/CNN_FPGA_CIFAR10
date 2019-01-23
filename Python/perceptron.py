@@ -16,6 +16,9 @@ def perceptron (V, P, B) :
 
 	Prob = Prob[0]
 
+	for elem in Prob:
+		print elem
+
 	for i in range(len(Prob)) :
 		u = 0
 		for j in range(len(Prob)) :

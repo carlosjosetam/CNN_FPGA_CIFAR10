@@ -12,7 +12,7 @@ A reference double precision filter for accuracy comparisons to floating point
 */
 
 // Include files for data types
-#include "define.h"
+#include "../../include/define_only_conv.h"
 #include "stdio.h"
 #include "stdint.h"
 
@@ -64,7 +64,7 @@ int main () {
 	uint8_t M[I_SIZE_INPUT_X*I_SIZE_INPUT_Y*I_LAYERS_INPUT_C1];
 	int add_M;
 
-	read_image_ppm("testbench/conv_test_image.ppm", M);
+	read_image_pgm("testbench/babu.pgm", M);
 
 	return 0;
 }
