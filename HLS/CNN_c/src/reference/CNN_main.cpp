@@ -17,7 +17,7 @@ void CNN_main (
 	double * image,
 	double * Prob
 ) {
-	printf("log: Starting CNN_main...\n");
+	//printf("log: Starting CNN_main...\n");
 	
 	// we will have two memories of maximum size
 	double memory_1[I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*F_C1_WEIGHT_C] = {0};
@@ -61,8 +61,8 @@ void testbench_1() {
 	int i_max;	
 
 	
-	int error = 0;
-	int nb_images = 10;
+	float error = 0;
+	int nb_images = 1000;
 	for(int i=0; i<nb_images; i++)
 	{
 		//----------------begin ------------------
@@ -78,15 +78,17 @@ void testbench_1() {
 				i_max = k;
 			}
 		}
-		if ((Prob[i_max] == labels[i]) == 0) {
+		if (i_max != labels[i]) {
 			error++;
-			printf("prob max %f in position %d x %d \n", Prob[i_max], i_max, labels[i]);
-			printf("Erreur %f\n", error/nb_images);
+			//printf("i %d:prob max %f in position %d x %d \n", i, Prob[i_max], i_max, labels[i]);
+			//printf("Erreur %f\n", float(float(error)/(i+1)));
 		}	
+		
+			
 		//--------------------end ------------------------
 	}
-	float hit = 1.0 - float(error/nb_images);
-	printf("Final HIT rate %f\n", hit);
+	float hit = 1.0 - (float(error)/nb_images);
+	printf("Final HIT rate %f\n, %f", hit, error);
 	
 
 }

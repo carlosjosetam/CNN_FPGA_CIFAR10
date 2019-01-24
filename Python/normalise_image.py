@@ -19,7 +19,7 @@ print "\n==> creating file .h"
 # create .h file called images.h
 f = open("images.h", 'w+');
 
-range_images = 10
+range_images = 1000
 
 f.write("static double images[" + str(range_images) + "][24*24*3] = {\n")
 

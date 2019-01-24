@@ -11,8 +11,9 @@ using namespace std;
 
 	/* Matrix index | address
 	M[i][j][k] => M[w*h*d]
-	
-	add_M = i + j*(w) + k*(w*h)
+
+	// here we pursue the filter index, so i <=> j
+	add_M = j + i*(w) + k*(w*h)
 	*/
 
 	/* Filter index | address
@@ -47,7 +48,7 @@ void CR1_ref (
 	INIT_L:for(int l=0; l<c; l++){
 		INIT_J:for(int j=0; j<h; j++){
 			INIT_I:for(int i=0; i<w; i++){	
-				add_AF = i + j*w + l*w*h;
+				add_AF = j + i*w + l*w*h;
 				end_conv[add_AF] = 0;				
 			}
 		}
@@ -59,11 +60,12 @@ void CR1_ref (
 			FOR_J:for(j=0; j<h; j++){
 				FOR_I:for(i=0; i<w; i++){	
 					aux=0;						
-					FOR_B:for(b=0; b<F_SIZE_X; b++) {
-						FOR_A:for(a=0; a<F_SIZE_Y; a++) {
+					FOR_A:for(a=0; a<F_SIZE_Y; a++) {					
+						FOR_B:for(b=0; b<F_SIZE_X; b++) {
 							i_aux = i-1+a;
 							j_aux = j-1+b;
-							if ((i_aux < 0 || i_aux > w-1 || j_aux < 0 || j_aux > h-1) == 0) {											
+							if ((i_aux < 0 || i_aux > w-1 || j_aux < 0 || j_aux > h-1) == 0) {						
+								// here we pursue the filter index, so i <=> j					
 								add_M = j_aux + i_aux*(w) + k*(w*h);
 								add_F = l + k*(c) + b*(c*d) + a*(c*d*fw);
 								aux += F[add_F]*M[add_M];
@@ -72,7 +74,7 @@ void CR1_ref (
 							}			
 						}
 					}
-					add_AF = i + j*w + l*w*h;
+					add_AF = j + i*w + l*w*h;
 					end_conv[add_AF] += aux;
 					
 						
@@ -81,7 +83,7 @@ void CR1_ref (
 		}
 		BIAS_J:for(j=0; j<h; j++){
 			BIAS_I:for(i=0; i<w; i++){	
-				add_AF = i + j*w + l*w*h;
+				add_AF = j + i*w + l*w*h;
 				end_conv[add_AF] += B[l];
 				
 				// RELU
@@ -117,7 +119,7 @@ void CR2_ref (
 	INIT_L:for(int l=0; l<c; l++){
 		INIT_J:for(int j=0; j<h; j++){
 			INIT_I:for(int i=0; i<w; i++){	
-				add_AF = i + j*w + l*w*h;
+				add_AF = j + i*w + l*w*h;
 				end_conv[add_AF] = 0;				
 			}
 		}
@@ -129,25 +131,26 @@ void CR2_ref (
 			FOR_J:for(j=0; j<h; j++){
 				FOR_I:for(i=0; i<w; i++){	
 					aux=0;						
-					FOR_B:for(b=0; b<F_SIZE_X; b++) {
-						FOR_A:for(a=0; a<F_SIZE_Y; a++) {
+					FOR_A:for(a=0; a<F_SIZE_Y; a++) {					
+						FOR_B:for(b=0; b<F_SIZE_X; b++) {
 							i_aux = i-1+a;
 							j_aux = j-1+b;
 							if ((i_aux < 0 || i_aux > w-1 || j_aux < 0 || j_aux > h-1) ==0) {					
+								// here we pursue the filter index, so i <=> j
 								add_M = j_aux + i_aux*(w) + k*(w*h);
 								add_F = l + k*(c) + b*(c*d) + a*(c*d*fw);
 								aux += F[add_F]*M[add_M];	
 							}			
 						}
 					}
-					add_AF = i + j*w + l*w*h;
+					add_AF = j + i*w + l*w*h;
 					end_conv[add_AF] += aux;		
 				}				
 			}
 		}
 		BIAS_J:for(j=0; j<h; j++){
 			BIAS_I:for(i=0; i<w; i++){	
-				add_AF = i + j*w + l*w*h;
+				add_AF = j + i*w + l*w*h;
 				end_conv[add_AF] += B[l];
 				// RELU
 				if ( end_conv[add_AF] < 0 ) end_conv[add_AF] = 0;
@@ -182,7 +185,7 @@ void CR3_ref (
 	INIT_L:for(int l=0; l<c; l++){
 		INIT_J:for(int j=0; j<h; j++){
 			INIT_I:for(int i=0; i<w; i++){	
-				add_AF = i + j*w + l*w*h;
+				add_AF = j + i*w + l*w*h;
 				end_conv[add_AF] = 0;				
 			}
 		}
@@ -193,26 +196,27 @@ void CR3_ref (
 		FOR_K:for(k=0; k<d; k++){
 			FOR_J:for(j=0; j<h; j++){
 				FOR_I:for(i=0; i<w; i++){	
-					aux=0;						
-					FOR_B:for(b=0; b<F_SIZE_X; b++) {
-						FOR_A:for(a=0; a<F_SIZE_Y; a++) {
+					aux=0;
+					FOR_A:for(a=0; a<F_SIZE_Y; a++) {					
+						FOR_B:for(b=0; b<F_SIZE_X; b++) {
 							i_aux = i-1+a;
 							j_aux = j-1+b;
 							if ((i_aux < 0 || i_aux > w-1 || j_aux < 0 || j_aux > h-1) ==0) {					
+								// here we pursue the filter index, so i <=> j
 								add_M = j_aux + i_aux*(w) + k*(w*h);
 								add_F = l + k*(c) + b*(c*d) + a*(c*d*fw);
 								aux += F[add_F]*M[add_M];	
 							}			
 						}
 					}
-					add_AF = i + j*w + l*w*h;
+					add_AF = j + i*w + l*w*h;
 					end_conv[add_AF] += aux;		
 				}				
 			}
 		}
 		BIAS_J:for(j=0; j<h; j++){
 			BIAS_I:for(i=0; i<w; i++){	
-				add_AF = i + j*w + l*w*h;
+				add_AF = j + i*w + l*w*h;
 				end_conv[add_AF] += B[l];
 				
 				// RELU
