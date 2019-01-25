@@ -187,6 +187,7 @@ void reshape_ref (
 			FOR_K:for(k=0; k<d; k++) {
 				add_M = j + i*(h) + k*(h*w);
 				N[add_N] = M[add_M];
+				//printf("reshape k: %f\n", N[add_N]);
 				add_N++;
 			}
 		}
@@ -223,6 +224,7 @@ void perceptron_ref (
 
 	double u = 0;
 	FOR_J_PROB:for(j=0; j<h; j++) {
+		//printf("prob k: %f in k:%d\n", N[j], j);
 		u = 0;
 		FOR_K_PROB:for(k=0; k<h; k++) {
 			u += exp(N[k]);

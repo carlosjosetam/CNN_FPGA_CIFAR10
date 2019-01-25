@@ -19,13 +19,13 @@ print "\n==> creating file .h"
 # create .h file called images.h
 f = open("images.h", 'w+');
 
-range_images = 1000
+range_images = 1
 
 f.write("static double images[" + str(range_images) + "][24*24*3] = {\n")
 
 for l in range(range_images) :
 	# READ FILE PPM 
-	image_name = "image_" + str(l) + "_4.ppm"
+	image_name = "image_" + str(7) + "_4.ppm"
 	I = read_ppm("../images/" + image_name)
 	
 	# declare variable in c for the .h	
@@ -39,9 +39,9 @@ for l in range(range_images) :
 		for i in range(24):
 			for j in range (24):
 				if not (k*i*j == 1058): # end of file
-					f.write("%f,\n" % (I[k][i][j]))
+					f.write("%d,\n" % (int(I[k][i][j]*(2**12))))
 				else:
-					f.write("%f\n" % (I[k][i][j]))
+					f.write("%d\n" % (int(I[k][i][j]*(2**12))))
 
 	if (l < range_images-1):
 		f.write("},\n")

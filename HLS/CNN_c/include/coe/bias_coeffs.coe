@@ -1,0 +1,16 @@
+from CIFAR10 import *
+
+
+
+print "\n==> starting COE gen .py"
+
+# load data from CNN file coeff
+CIFAR10_data = CIFAR10_load("CNN_coeff_3x3.py");
+
+# creating "BIAS_CONV_1"
+
+for elem in CIFAR10_data["BIAS_CONV_1"]:
+	
+
+
+

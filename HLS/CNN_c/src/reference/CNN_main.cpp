@@ -1,8 +1,7 @@
 #include "../../include/define.h"
 #include "../../include/coeffs_double.h"
 #include "../../include/labels.h"
-#include "../../images/image_0_4.h"
-#include "../../../../Python/images.h"
+#include "../../include/images.h"
 #include "stdio.h"
 #include "stdint.h"
 #include "stdlib.h"
@@ -12,7 +11,6 @@
 
 using namespace std;
 
-#pragma top level
 void CNN_main (
 	double * image,
 	double * Prob
@@ -48,7 +46,15 @@ void CNN_main (
 }
 
 void testbench_1() {
-	printf("testbench_1\n");
+	int nb_images = 1000;
+	printf("==> CNN CIFAR10 \n");
+	printf("\n");
+	printf("INP Grenoble - Phelma - SEI - SoC Design\n");
+	printf("Authors: C.J., TAMANCOLDI, D.A, SIVEIRA TAPIA\n");
+	printf("CNN CIFAR10 on C. Hit rate expected: 66.01\n");
+	printf("\n");
+	printf("==> Running CNN CIFAR10 test with %d images from dataset 4\n", nb_images);
+	printf("run: testbench_1...\n");
 	
 	// image
 	double image[I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*I_LAYERS_INPUT_C1];
@@ -62,9 +68,10 @@ void testbench_1() {
 
 	
 	float error = 0;
-	int nb_images = 1000;
+			
 	for(int i=0; i<nb_images; i++)
 	{
+		//printf("\n==> Predict image %d\n", i);
 		//----------------begin ------------------
 	
 		// neural network
@@ -73,6 +80,7 @@ void testbench_1() {
 		// find max
 		max = 0;
 		for(int k=0; k<10; k++) {
+
 			if (Prob[k] > max) {
 				max = Prob[k];
 				i_max = k;
@@ -80,21 +88,26 @@ void testbench_1() {
 		}
 		if (i_max != labels[i]) {
 			error++;
-			//printf("i %d:prob max %f in position %d x %d \n", i, Prob[i_max], i_max, labels[i]);
-			//printf("Erreur %f\n", float(float(error)/(i+1)));
-		}	
+			
+		}
+		
+		//printf("i %d:prob max %f in position %d x %d \n", i, Prob[i_max], i_max, labels[i]);
+		//printf("Erreur %f\n", float(float(error)/(i+1)));	
 		
 			
 		//--------------------end ------------------------
 	}
 	float hit = 1.0 - (float(error)/nb_images);
-	printf("Final HIT rate %f\n, %f", hit, error);
+	printf("\n");
+	printf("==> DONE\n");
+	printf("HIT rate: %f, ERROR rate: %f\n", hit, error/nb_images);
 	
 
 }
 
-int main () {
+int main() {
 	testbench_1();
 
-	return 0;
+	return (0);
+
 }

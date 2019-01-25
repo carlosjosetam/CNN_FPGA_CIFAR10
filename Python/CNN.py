@@ -33,18 +33,26 @@ names = ["airplane",
 	"ship",
 	"truck"]
 
+nb_images = 100
+
 print "\n==> starting program CNN.py"
+print("==> CNN CIFAR10")
+print("INP Grenoble - Phelma - SEI - SoC Design");
+print("Authors: C.J., TAMANCOLDI, D.A, SIVEIRA TAPIA");
+print("CNN CIFAR10 on Python");
+print("==> Running CNN CIFAR10 test with %d images from dataset 4", nb_images);
+print("run: testbench_1...");
 
 # load data from CNN file coeff
 CIFAR10_data = CIFAR10_load("CNN_coeff_3x3.py");
 
-nb_images = 1000
+
 error = 0
 
-for i in range(1) :
+for i in range(nb_images) :
 	# READ FILE PPM
 	image_name = "image_" + str(i) + "_4.ppm"
-	I = read_ppm("../images/" + image_name)
+	I = read_ppm("images/" + image_name)
 
 	#print_matrix(I)
 
@@ -54,8 +62,6 @@ for i in range(1) :
 	# predict image
 	predict = CIFAR10_predict(I, CIFAR10_data);
 	
-	for elem in predict:
-		print elem
 
 	# print predict to file
 	if print_log :
@@ -65,11 +71,13 @@ for i in range(1) :
 
 	max_index = predict.index(max(predict))
 
-	print image_name, "==> it's a", names[max_index], "| label:", names[labels[i]]
+	#print image_name, "==> it's a", names[max_index], "| label:", names[labels[i]]
 	if labels[i] != max_index :
 		error += 1
-	if i != 0 :
-		print "error_rate:", error/float(i)
+	#if i != 0 :
+		#print "error_rate:", error/float(i)
+
+print "error_rate:", error/float(nb_images)
 
 
 

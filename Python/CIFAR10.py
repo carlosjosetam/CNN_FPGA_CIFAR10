@@ -10,7 +10,7 @@ from reshape import *
 from perceptron import *
 #from CNN_coeff_5x5 import *
 
-print_log = 1
+print_log = 0
 test = 0
 
 # This algorithm is going to instanciate the CNN

@@ -66,8 +66,6 @@ def convolution(M, F, B) :
                     aux = 0
                     for b in range(fw):
                         for a in range(fh):
-					if(b==0 and i ==1 and j ==1 and k==0 and l==0):
-						print("valor filtro para percorrer a: %f" %F[a][b][k][l])
 						
 					#print("coeficientes imagem dentro convolucao [i, j] : "), i-1+a, j-1+b
 					#print("coeficientes filtro dentro convolucao [a, b, k, l] : "), a, b, k, l
@@ -82,10 +80,6 @@ def convolution(M, F, B) :
 		#if(i==j and l==0):
 			#print("valor conv: %f" %aux_filter[l][i-1][j-1])
 
-
-    print("primeiros valores d M = %f" %M[0][0][0])
-    print("primeiros valores d M = %f" %M[0][1][0])
-    print("primeiros valores d M = %f" %M[0][2][0])
     
     #print_matrix(aux_filter)
     return aux_filter;

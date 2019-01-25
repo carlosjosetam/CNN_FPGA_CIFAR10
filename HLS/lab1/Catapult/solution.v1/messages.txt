@@ -1,5 +1,0 @@
-
-# Messages from "go new"
-
-Creating project directory '/tp-fmr/TP_SYSTEMC/TP7.HLS/catapultlabs/lab1/Catapult'. (PRJ-1)
-Branching solution 'solution.v1' at state 'new' (PRJ-2)

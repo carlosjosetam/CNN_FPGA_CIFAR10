@@ -60,7 +60,7 @@ using namespace std;
 
 
 //------------TEST OF MULTIPLE IMAGES---------------
-#define NB_IMAGES 1000
+#define NB_IMAGES 1
 /* Matrix index | address
 	M[i][j][k] => M[I_SIZE_INPUT_C1*I_SIZE_INPUT_C1*I_LAYERS_INPUT_C1]
 	add_M = i + j*(I_SIZE_INPUT_C1) + k*(I_SIZE_INPUT_C1*I_SIZE_INPUT_C1);
@@ -71,32 +71,7 @@ using namespace std;
 	add_F = a + b*(F_SIZE_X) + k*(F_SIZE_X*F_SIZE_Y) + l*(F_SIZE_X*F_SIZE_Y*F_C1_WEIGHT_D);
 */
 
-// define classes
-enum types{airplane,
-	automobile,
-	bird,
-	cat,
-	deer,
-	dog,
-	frog,
-	horse,
-	ship,
-	truck
-};
 
-/*string labels_CIFAR10[10] = {
-	"airplane",
-	"automobile",
-	"bird",
-	"cat",
-	"deer",
-	"dog",
-	"frog",
-	"horse",
-	"ship",
-	"truck"
-};
-*/
 
 // define functions
 void CR1_ref (
@@ -147,19 +122,41 @@ void perceptron_ref (
 	double *N // vector out 10
 );
 
+void CNN_main(
+	double * image,
+	double * Prob
+);
 
 
 
 
 
+// define classes
+enum types{airplane,
+	automobile,
+	bird,
+	cat,
+	deer,
+	dog,
+	frog,
+	horse,
+	ship,
+	truck
+};
 
-
-
-
-
-
-
-
+/*string labels_CIFAR10[10] = {
+	"airplane",
+	"automobile",
+	"bird",
+	"cat",
+	"deer",
+	"dog",
+	"frog",
+	"horse",
+	"ship",
+	"truck"
+};
+*/
 
 
 #endif
