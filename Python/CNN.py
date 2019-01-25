@@ -38,7 +38,7 @@ nb_images = 100
 print "\n==> starting program CNN.py"
 print("==> CNN CIFAR10")
 print("INP Grenoble - Phelma - SEI - SoC Design");
-print("Authors: C.J., TAMANCOLDI, D.A, SIVEIRA TAPIA");
+print("Authors: C.J., TAMANCOLDI, D.A, SILVEIRA TAPIA");
 print("CNN CIFAR10 on Python");
 print("==> Running CNN CIFAR10 test with %d images from dataset 4", nb_images);
 print("run: testbench_1...");

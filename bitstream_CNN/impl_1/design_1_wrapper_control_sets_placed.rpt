@@ -1,0 +1,148 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Fri Jan 25 10:47:45 2019
+| Host         : ocaepc56 running 64-bit unknown
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    78 |
+| Unused register locations in slices containing registers |   234 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             197 |           73 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             485 |          210 |
+| Yes          | No                    | No                     |               2 |            2 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             626 |          317 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------+----------------------------------------------------------------------------------------------+--------------------------------------+------------------+----------------+
+|             Clock Signal            |                                         Enable Signal                                        |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++-------------------------------------+----------------------------------------------------------------------------------------------+--------------------------------------+------------------+----------------+
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx32963z1      |                                      |                1 |              1 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx47528z1      |                                      |                1 |              1 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx47534z1      | btn_IBUF[1]                          |                1 |              3 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[47] | btn_IBUF[1]                          |                1 |              3 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx47533z1      | btn_IBUF[1]                          |                1 |              3 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx47532z1      | btn_IBUF[1]                          |                1 |              3 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx32959z1      | btn_IBUF[1]                          |                3 |              3 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx32962z1      | btn_IBUF[1]                          |                2 |              3 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx32961z1      | btn_IBUF[1]                          |                1 |              3 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[46] | btn_IBUF[1]                          |                1 |              3 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[62] | btn_IBUF[1]                          |                1 |              3 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx33961z1      | btn_IBUF[1]                          |                2 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx33962z1      | btn_IBUF[1]                          |                1 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx49521z1      | btn_IBUF[1]                          |                1 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx32964z1      | btn_IBUF[1]                          |                3 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx32965z1      | btn_IBUF[1]                          |                2 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx32966z1      | btn_IBUF[1]                          |                1 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx32967z1      | btn_IBUF[1]                          |                2 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx33959z1      | btn_IBUF[1]                          |                2 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[20] | btn_IBUF[1]                          |                1 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx47527z1      | btn_IBUF[1]                          |                3 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx55752z1      | btn_IBUF[1]                          |                1 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[67] | btn_IBUF[1]                          |                2 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[36] | btn_IBUF[1]                          |                1 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[21] | btn_IBUF[1]                          |                1 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx33964z1      | btn_IBUF[1]                          |                3 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx33965z1      | btn_IBUF[1]                          |                2 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx34959z1      | btn_IBUF[1]                          |                3 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx33960z1      | btn_IBUF[1]                          |                3 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx32968z1      | btn_IBUF[1]                          |                4 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[41] | btn_IBUF[1]                          |                3 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx34953z1      | btn_IBUF[1]                          |                3 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx47531z1      | btn_IBUF[1]                          |                3 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx32960z1      | btn_IBUF[1]                          |                2 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[10] | btn_IBUF[1]                          |                1 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx47535z1      | btn_IBUF[1]                          |                4 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx34954z1      | btn_IBUF[1]                          |                2 |              6 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx34960z1      | btn_IBUF[1]                          |                4 |              6 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[15] | btn_IBUF[1]                          |                2 |              6 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx33963z1      | btn_IBUF[1]                          |                4 |              6 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx33958z1      | btn_IBUF[1]                          |                4 |              6 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[81] | btn_IBUF[1]                          |                5 |              6 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                              | cam/rd/vga_q_q[data][0][7]_i_1_n_0   |                2 |              6 |
+|  CAMERA_PCLK_IBUF_BUFG              | cam/cam/etat_d[1]                                                                            | cam/cam/data_q[7]_i_1_n_0            |                2 |              8 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/rd/C_Sync/sync_c_q[1][9]_i_1_n_0                                                         | cam/rd/C_Sync/sync_c_q[0][9]_i_1_n_0 |                3 |              9 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx20762z1                                         | btn_IBUF[1]                          |                3 |             10 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx48533z1      | btn_IBUF[1]                          |                4 |             11 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx7593z1       | btn_IBUF[1]                          |                5 |             11 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                              | cam/rd/C_Sync/sync_c_q[0][9]_i_1_n_0 |                3 |             11 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx13903z1                                         | btn_IBUF[1]                          |                6 |             12 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx62302z1                                         | btn_IBUF[1]                          |               10 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx63913z1                                         | btn_IBUF[1]                          |                7 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx57874z1                                         | btn_IBUF[1]                          |                9 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx45236z1                                         | btn_IBUF[1]                          |                5 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx9376z1                                          | btn_IBUF[1]                          |                8 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx45343z1                                         | btn_IBUF[1]                          |                9 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx16947z1                                         | btn_IBUF[1]                          |                6 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx14230z1                                         | btn_IBUF[1]                          |                8 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx10908z1                                         | btn_IBUF[1]                          |               11 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx10547z1                                         | btn_IBUF[1]                          |                8 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[75] | btn_IBUF[1]                          |               10 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx1956z1                                          | btn_IBUF[1]                          |                6 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx20734z1                                         | btn_IBUF[1]                          |                7 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx22734z1                                         | btn_IBUF[1]                          |                8 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx31551z1                                         | btn_IBUF[1]                          |                9 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx33407z2                                         | btn_IBUF[1]                          |                6 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx35517z1                                         | btn_IBUF[1]                          |               10 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx39058z1                                         | btn_IBUF[1]                          |               13 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx39304z1                                         | btn_IBUF[1]                          |                9 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[23] | btn_IBUF[1]                          |               11 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/fsm_output[49] | btn_IBUF[1]                          |                8 |             16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx22283z1                                         | btn_IBUF[1]                          |               16 |             18 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | cam/CNN_main_map/CNN_main_simple_core_inst/nx45342z1                                         | btn_IBUF[1]                          |                8 |             18 |
+|  CAMERA_PCLK_IBUF_BUFG              | cam/cam/etat_q_reg_n_0_[0]                                                                   | cam/cam/c_q[0][9]_i_1_n_0            |                5 |             19 |
+|  CAMERA_PCLK_IBUF_BUFG              |                                                                                              | cam/proc_out_mem_addr[16]_i_1_n_0    |                9 |             26 |
+|  CAMERA_PCLK_IBUF_BUFG              |                                                                                              |                                      |               34 |             97 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                              |                                      |               42 |            113 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                              | btn_IBUF[1]                          |              196 |            442 |
++-------------------------------------+----------------------------------------------------------------------------------------------+--------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     2 |
+| 3      |                     9 |
+| 4      |                    14 |
+| 5      |                    11 |
+| 6      |                     7 |
+| 8      |                     1 |
+| 9      |                     1 |
+| 10     |                     1 |
+| 11     |                     3 |
+| 12     |                     1 |
+| 16+    |                    28 |
++--------+-----------------------+
+
+

@@ -1,0 +1,7 @@
+1548409356.551957
+*4040766703
+IEEE	/softl3/precision2016_1_1/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE_2002	STD_LOGIC_1164	STD_LOGIC_1164	2	0
+IEEE	/softl3/precision2016_1_1/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE_2002	STD_LOGIC_ARITH	STD_LOGIC_ARITH	2	0
+mgc_hls	/tp-fmr/xph3sei710_Tamancoldi_Silveira/Catapult_CNN/Catapult_1/CNN_main_simple.v18/psr_vhdl_impl/rtlc_libs/mgc_hls	CCS_OUT_PKG_V1	CCS_OUT_PKG_V1	2	1101935551
+mgc_hls	/tp-fmr/xph3sei710_Tamancoldi_Silveira/Catapult_CNN/Catapult_1/CNN_main_simple.v18/psr_vhdl_impl/rtlc_libs/mgc_hls	MGC_IO_SYNC_PKG_V2	MGC_IO_SYNC_PKG_V2	2	3795947985
+mgc_hls	/tp-fmr/xph3sei710_Tamancoldi_Silveira/Catapult_CNN/Catapult_1/CNN_main_simple.v18/psr_vhdl_impl/rtlc_libs/mgc_hls	BLOCK_1R1W_RBW_PKG	BLOCK_1R1W_RBW_PKG	2	2719555656

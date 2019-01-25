@@ -50,8 +50,8 @@ void testbench_1() {
 	printf("==> CNN CIFAR10 \n");
 	printf("\n");
 	printf("INP Grenoble - Phelma - SEI - SoC Design\n");
-	printf("Authors: C.J., TAMANCOLDI, D.A, SIVEIRA TAPIA\n");
-	printf("CNN CIFAR10 on C. Hit rate expected: 66.01\n");
+	printf("Authors: C.J., TAMANCOLDI, D.A, SILVEIRA TAPIA\n");
+	printf("CNN CIFAR10 on C. Hit rate expected: 66.01%\n");
 	printf("\n");
 	printf("==> Running CNN CIFAR10 test with %d images from dataset 4\n", nb_images);
 	printf("run: testbench_1...\n");
@@ -100,7 +100,7 @@ void testbench_1() {
 	float hit = 1.0 - (float(error)/nb_images);
 	printf("\n");
 	printf("==> DONE\n");
-	printf("HIT rate: %f, ERROR rate: %f\n", hit, error/nb_images);
+	printf("HIT rate: %f%, ERROR rate: %f %\n", hit*100, error*100/nb_images);
 	
 
 }

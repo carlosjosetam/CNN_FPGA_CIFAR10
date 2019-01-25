@@ -1,0 +1,4 @@
+mgc_hls "/softl3/catapultc10_1b/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd" -2002
+mgc_hls "/softl3/catapultc10_1b/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd" -2002
+mgc_hls "/softl3/catapultc10_1b/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd" -2002
+work "/tp-fmr/xph3sei710_Tamancoldi_Silveira/Catapult_CNN/Catapult_1/CNN_main_simple.v18/rtl.vhdl" -2002

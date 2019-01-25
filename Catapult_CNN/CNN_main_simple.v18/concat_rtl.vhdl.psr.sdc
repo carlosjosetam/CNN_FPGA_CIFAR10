@@ -1,0 +1,53 @@
+set sdc_version 1.6 
+
+create_clock -name clk -period 40.0 -waveform { 0.0 20.0 } [get_ports {clk}]
+set_clock_uncertainty 0.0 [get_clocks {clk}]
+
+create_clock -name virtual_io_clk -period 40.0
+# These constraints prevent the Precision 'No initialized timing analysis; 
+# cannot define a Clock.' error message in combinational designs
+set hls_design_clk [lindex [concat [find_clocks -top] [all_clocks]] 0]
+set_input_delay 0.0 -clock $hls_design_clk [all_inputs]
+set_output_delay 0.0 -clock $hls_design_clk [all_outputs]
+
+## IO TIMING CONSTRAINTS
+set_input_delay -clock [get_clocks {clk}] 0.0 [get_ports {rst}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {image_rsc_radr*}]
+set_input_delay -clock [get_clocks {clk}] 2.13 [get_ports {image_rsc_q*}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {image_rsc_re}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {image_rsc_triosy_lz}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {F_1_rsc_radr*}]
+set_input_delay -clock [get_clocks {clk}] 2.13 [get_ports {F_1_rsc_q*}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {F_1_rsc_re}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {F_1_rsc_triosy_lz}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {B_1_rsc_radr*}]
+set_input_delay -clock [get_clocks {clk}] 2.13 [get_ports {B_1_rsc_q*}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {B_1_rsc_re}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {B_1_rsc_triosy_lz}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {F_2_rsc_radr*}]
+set_input_delay -clock [get_clocks {clk}] 2.13 [get_ports {F_2_rsc_q*}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {F_2_rsc_re}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {F_2_rsc_triosy_lz}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {B_2_rsc_radr*}]
+set_input_delay -clock [get_clocks {clk}] 2.13 [get_ports {B_2_rsc_q*}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {B_2_rsc_re}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {B_2_rsc_triosy_lz}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {F_3_rsc_radr*}]
+set_input_delay -clock [get_clocks {clk}] 2.13 [get_ports {F_3_rsc_q*}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {F_3_rsc_re}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {F_3_rsc_triosy_lz}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {B_3_rsc_radr*}]
+set_input_delay -clock [get_clocks {clk}] 2.13 [get_ports {B_3_rsc_q*}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {B_3_rsc_re}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {B_3_rsc_triosy_lz}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {P_W_rsc_radr*}]
+set_input_delay -clock [get_clocks {clk}] 2.13 [get_ports {P_W_rsc_q*}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {P_W_rsc_re}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {P_W_rsc_triosy_lz}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {P_B_rsc_radr*}]
+set_input_delay -clock [get_clocks {clk}] 2.13 [get_ports {P_B_rsc_q*}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {P_B_rsc_re}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {P_B_rsc_triosy_lz}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {index_rsc_dat*}]
+set_output_delay -clock [get_clocks {clk}] 0.0 [get_ports {index_rsc_triosy_lz}]
+

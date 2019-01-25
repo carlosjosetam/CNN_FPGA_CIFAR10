@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Fri Jan 25 10:28:28 2019
+# Process ID: 8265
+# Current directory: /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/image_in_synth_1
+# Command line: vivado -log image_in.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source image_in.tcl
+# Log file: /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/image_in_synth_1/image_in.vds
+# Journal file: /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/image_in_synth_1/vivado.jou
+#-----------------------------------------------------------
+source image_in.tcl -notrace

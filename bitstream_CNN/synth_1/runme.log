@@ -1,0 +1,1044 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/Zynq/Zybo/ZyboAudio/ZyboRTOS/ip_repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/Zynq/Zybo/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/softslin/vivado_17.1/Vivado/2017.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'design_1_processing_system7_0_0' generated file not found '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/sim/libps7.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_processing_system7_0_0' generated file not found '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/sim/libps7.dll'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_processing_system7_0_0' generated file not found '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/sim/libremoteport.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_processing_system7_0_0' generated file not found '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/sim/libremoteport.dll'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_processing_system7_0_0' generated file not found '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_clk_wiz_0_0' generated file not found '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0_1/stats.txt'. Please regenerate to continue.
+Command: synth_design -top design_1_wrapper -part xc7z010clg400-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11660 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1203.941 ; gain = 68.000 ; free physical = 7255 ; free virtual = 19568
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:66]
+INFO: [Synth 8-3491] module 'design_1' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1.vhd:14' bound to instance 'design_1_i' of component 'design_1' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'design_1' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1.vhd:52]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/design_1_clk_wiz_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/design_1_processing_system7_0_0_stub.vhdl:47]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (1#1) [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1.vhd:52]
+INFO: [Synth 8-3491] module 'IOBUF' declared at '/softslin/vivado_17.1/Vivado/2017.1/scripts/rt/data/unisim_comp.v:17657' bound to instance 'iic_scl_iobuf' of component 'IOBUF' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'IOBUF' [/softslin/vivado_17.1/Vivado/2017.1/scripts/rt/data/unisim_comp.v:17657]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IOBUF' (2#1) [/softslin/vivado_17.1/Vivado/2017.1/scripts/rt/data/unisim_comp.v:17657]
+INFO: [Synth 8-3491] module 'IOBUF' declared at '/softslin/vivado_17.1/Vivado/2017.1/scripts/rt/data/unisim_comp.v:17657' bound to instance 'iic_sda_iobuf' of component 'IOBUF' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:195]
+INFO: [Synth 8-3491] module 'Zybo_CAM_VGA_Proc' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:32' bound to instance 'cam' of component 'Zybo_CAM_VGA_Proc' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'Zybo_CAM_VGA_Proc' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:57]
+	Parameter cam_cfg bound to: 96'b000000000000000000000010100000000000000000000000000000011110000000000000000000000000000000000011 
+INFO: [Synth 8-3491] module 'camera_capture' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/camera/camera_capture_RGB565_8b_RGB.vhd:36' bound to instance 'cam' of component 'camera_capture' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:457]
+INFO: [Synth 8-638] synthesizing module 'camera_capture' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/camera/camera_capture_RGB565_8b_RGB.vhd:50]
+	Parameter cam_cfg bound to: 96'b000000000000000000000010100000000000000000000000000000011110000000000000000000000000000000000011 
+WARNING: [Synth 8-6014] Unused sequential element fin_reg was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/camera/camera_capture_RGB565_8b_RGB.vhd:139]
+WARNING: [Synth 8-6014] Unused sequential element c_next_reg[0] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/camera/camera_capture_RGB565_8b_RGB.vhd:139]
+WARNING: [Synth 8-6014] Unused sequential element c_next_reg[1] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/camera/camera_capture_RGB565_8b_RGB.vhd:139]
+INFO: [Synth 8-256] done synthesizing module 'camera_capture' (3#1) [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/camera/camera_capture_RGB565_8b_RGB.vhd:50]
+	Parameter stream_RGB_cfg bound to: 98'b00000000000000000000001010000000000000000000000000000001111000000000000000000000000000000000001101 
+	Parameter stream_Lum_cfg bound to: 98'b00000000000000000000001010000000000000000000000000000001111000000000000000000000000000000000000101 
+INFO: [Synth 8-3491] module 'stream_RGB_to_Lum' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/stream_processing/stream_RGB_to_Lum.vhd:37' bound to instance 'RGB2Lum' of component 'stream_RGB_to_Lum' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:469]
+INFO: [Synth 8-638] synthesizing module 'stream_RGB_to_Lum' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/stream_processing/stream_RGB_to_Lum.vhd:51]
+	Parameter stream_RGB_cfg bound to: 98'b00000000000000000000001010000000000000000000000000000001111000000000000000000000000000000000001101 
+	Parameter stream_Lum_cfg bound to: 98'b00000000000000000000001010000000000000000000000000000001111000000000000000000000000000000000000101 
+WARNING: [Synth 8-6014] Unused sequential element l_reg was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/stream_processing/stream_RGB_to_Lum.vhd:68]
+WARNING: [Synth 8-6014] Unused sequential element l_n_reg was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/stream_processing/stream_RGB_to_Lum.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'stream_RGB_to_Lum' (4#1) [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/stream_processing/stream_RGB_to_Lum.vhd:51]
+INFO: [Synth 8-3491] module 'mem2p_76800_8' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/mem2p_76800_8_stub.vhdl:5' bound to instance 'memi' of component 'mem2p_76800_8' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:491]
+INFO: [Synth 8-638] synthesizing module 'mem2p_76800_8' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/mem2p_76800_8_stub.vhdl:23]
+INFO: [Synth 8-637] synthesizing blackbox instance 'CNN_main_map' of component 'CNN_main_simple' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:523]
+INFO: [Synth 8-3491] module 'B_1' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/B_1_stub.vhdl:5' bound to instance 'BIAS_1' of component 'B_1' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:579]
+INFO: [Synth 8-638] synthesizing module 'B_1' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/B_1_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'B_2' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/B_2_stub.vhdl:5' bound to instance 'BIAS_2' of component 'B_2' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:589]
+INFO: [Synth 8-638] synthesizing module 'B_2' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/B_2_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'B_3' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/B_3_stub.vhdl:5' bound to instance 'BIAS_3' of component 'B_3' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:599]
+INFO: [Synth 8-638] synthesizing module 'B_3' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/B_3_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'F_1' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/F_1_stub.vhdl:5' bound to instance 'FILTER_1' of component 'F_1' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:613]
+INFO: [Synth 8-638] synthesizing module 'F_1' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/F_1_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'F_2' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/F_2_stub.vhdl:5' bound to instance 'FILTER_2' of component 'F_2' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:623]
+INFO: [Synth 8-638] synthesizing module 'F_2' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/F_2_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'F_3' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/F_3_stub.vhdl:5' bound to instance 'FILTER_3' of component 'F_3' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:633]
+INFO: [Synth 8-638] synthesizing module 'F_3' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/F_3_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'P_W' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/P_W_stub.vhdl:5' bound to instance 'Perceptron_W' of component 'P_W' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:644]
+INFO: [Synth 8-638] synthesizing module 'P_W' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/P_W_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'P_B' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/P_B_stub.vhdl:5' bound to instance 'Perceptron_B' of component 'P_B' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:654]
+INFO: [Synth 8-638] synthesizing module 'P_B' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/P_B_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'image_in' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/image_in_stub.vhdl:5' bound to instance 'Image_block' of component 'image_in' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:665]
+INFO: [Synth 8-638] synthesizing module 'image_in' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/image_in_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'mem2p_76800_8' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/realtime/mem2p_76800_8_stub.vhdl:5' bound to instance 'memo' of component 'mem2p_76800_8' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:676]
+	Parameter vga_cfg bound to: 352'b0000000000000000000000110010000000000000000000000000001000001100000000000000000000000010100000000000000000000000000000011110000000000000000000000000000000010000000000000000000000000000000010110000000000000000000000000011000000000000000000000000000000011111000000000000000000000000011000000000000000000000000000000000001000000000000000000000000000000011 
+	Parameter mem_cfg bound to: 256'b0000000000000000000000010100000000000000000000000000000011110000000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000001000000000000000000000000000100010000000000000000000000000000100000000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'display_VGA_memory_read' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:29' bound to instance 'rd' of component 'display_VGA_memory_read' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:694]
+INFO: [Synth 8-638] synthesizing module 'display_VGA_memory_read' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:45]
+	Parameter vga_cfg bound to: 352'b0000000000000000000000110010000000000000000000000000001000001100000000000000000000000010100000000000000000000000000000011110000000000000000000000000000000010000000000000000000000000000000010110000000000000000000000000011000000000000000000000000000000011111000000000000000000000000011000000000000000000000000000000000001000000000000000000000000000000011 
+	Parameter mem_cfg bound to: 256'b0000000000000000000000010100000000000000000000000000000011110000000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000001000000000000000000000000000100010000000000000000000000000000100000000000000000000000000000000000 
+	Parameter sync_cfg bound to: 320'b00000000000000000000001100100000000000000000000000000010000011000000000000000000000000101000000000000000000000000000000111100000000000000000000000000000000100000000000000000000000000000000101100000000000000000000000000110000000000000000000000000000000111110000000000000000000000000110000000000000000000000000000000000010 
+INFO: [Synth 8-3491] module 'display_synchro' declared at '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_synchro.vhd:26' bound to instance 'C_Sync' of component 'display_synchro' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'display_synchro' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_synchro.vhd:36]
+	Parameter sync_cfg bound to: 320'b00000000000000000000001100100000000000000000000000000010000011000000000000000000000000101000000000000000000000000000000111100000000000000000000000000000000100000000000000000000000000000000101100000000000000000000000000110000000000000000000000000000000111110000000000000000000000000110000000000000000000000000000000000010 
+WARNING: [Synth 8-6014] Unused sequential element fin_reg was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_synchro.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element sync_c_reg[0] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_synchro.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element sync_c_reg[1] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_synchro.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element c_v_reg[0] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_synchro.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element c_v_reg[1] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_synchro.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element sync_valid_reg was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_synchro.vhd:67]
+WARNING: [Synth 8-6014] Unused sequential element active_area_reg was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_synchro.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'display_synchro' (5#1) [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_synchro.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element vga_q_reg[data][0] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:85]
+WARNING: [Synth 8-6014] Unused sequential element vga_q_reg[data][1] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:85]
+WARNING: [Synth 8-6014] Unused sequential element vga_q_reg[data][2] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:85]
+INFO: [Synth 8-4471] merging register 'vga_q_q_reg[data][1][7:0]' into 'vga_q_q_reg[data][0][7:0]' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:86]
+INFO: [Synth 8-4471] merging register 'vga_q_q_reg[data][2][7:0]' into 'vga_q_q_reg[data][0][7:0]' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:86]
+INFO: [Synth 8-4471] merging register 'vga_out_reg[data][1][7:0]' into 'vga_out_reg[data][0][7:0]' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:92]
+INFO: [Synth 8-4471] merging register 'vga_out_reg[data][2][7:0]' into 'vga_out_reg[data][0][7:0]' [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:92]
+WARNING: [Synth 8-6014] Unused sequential element vga_d_reg[data][1] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:76]
+WARNING: [Synth 8-6014] Unused sequential element vga_d_reg[data][2] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:76]
+WARNING: [Synth 8-6014] Unused sequential element vga_q_q_reg[data][1] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:86]
+WARNING: [Synth 8-6014] Unused sequential element vga_q_q_reg[data][2] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:86]
+WARNING: [Synth 8-6014] Unused sequential element vga_out_reg[data][1] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:92]
+WARNING: [Synth 8-6014] Unused sequential element vga_out_reg[data][2] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'display_VGA_memory_read' (6#1) [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/VHDL/io_video/display/display_VGA_memory_read.vhd:45]
+WARNING: [Synth 8-6014] Unused sequential element led_false_reg was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:435]
+WARNING: [Synth 8-6014] Unused sequential element n_reg was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:512]
+WARNING: [Synth 8-6014] Unused sequential element proc_rst_reg was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:514]
+WARNING: [Synth 8-6014] Unused sequential element swu_reg was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:715]
+WARNING: [Synth 8-6014] Unused sequential element vga_dbg_reg[sync][active] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:714]
+WARNING: [Synth 8-6014] Unused sequential element vga_dbg_reg[sync][active_area] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:714]
+WARNING: [Synth 8-6014] Unused sequential element vga_dbg_reg[sync][first] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:714]
+WARNING: [Synth 8-6014] Unused sequential element vga_dbg_reg[sync][last] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:714]
+WARNING: [Synth 8-6014] Unused sequential element vga_dbg_reg[sync][image_last] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:714]
+WARNING: [Synth 8-6014] Unused sequential element vga_dbg_reg[sync][blanking_active] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:714]
+WARNING: [Synth 8-6014] Unused sequential element vga_dbg_reg[sync][blanking_last] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:714]
+WARNING: [Synth 8-6014] Unused sequential element vga_dbg_reg[sync][blanking_first] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:714]
+WARNING: [Synth 8-6014] Unused sequential element vga_dbg_reg[sync][blanking_second] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:714]
+WARNING: [Synth 8-6014] Unused sequential element vga_dbg_reg[sync][c][0] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:714]
+WARNING: [Synth 8-6014] Unused sequential element vga_dbg_reg[sync][c][1] was removed.  [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:714]
+WARNING: [Synth 8-3848] Net tproc_out_mem_we in module/entity Zybo_CAM_VGA_Proc does not have driver. [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:259]
+WARNING: [Synth 8-3848] Net tproc_out_mem_addr in module/entity Zybo_CAM_VGA_Proc does not have driver. [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:256]
+WARNING: [Synth 8-3848] Net tproc_out_mem_data_in in module/entity Zybo_CAM_VGA_Proc does not have driver. [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:257]
+INFO: [Synth 8-256] done synthesizing module 'Zybo_CAM_VGA_Proc' (7#1) [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/p-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/conv_CAM/VHDL/io_video/boards/Zybo_CAM_VGA_Proc.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (8#1) [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:66]
+WARNING: [Synth 8-3331] design Zybo_CAM_VGA_Proc has unconnected port VGA_rst_n
+WARNING: [Synth 8-3331] design Zybo_CAM_VGA_Proc has unconnected port btn[3]
+WARNING: [Synth 8-3331] design Zybo_CAM_VGA_Proc has unconnected port btn[2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1251.441 ; gain = 115.500 ; free physical = 7260 ; free virtual = 19574
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1251.441 ; gain = 115.500 ; free physical = 7259 ; free virtual = 19573
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp31/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp31/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp37/F_3_in_context.xdc] for cell 'cam/FILTER_3'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp37/F_3_in_context.xdc] for cell 'cam/FILTER_3'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp39/F_2_in_context.xdc] for cell 'cam/FILTER_2'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp39/F_2_in_context.xdc] for cell 'cam/FILTER_2'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp41/F_1_in_context.xdc] for cell 'cam/FILTER_1'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp41/F_1_in_context.xdc] for cell 'cam/FILTER_1'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp43/B_3_in_context.xdc] for cell 'cam/BIAS_3'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp43/B_3_in_context.xdc] for cell 'cam/BIAS_3'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp45/B_2_in_context.xdc] for cell 'cam/BIAS_2'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp45/B_2_in_context.xdc] for cell 'cam/BIAS_2'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp47/B_1_in_context.xdc] for cell 'cam/BIAS_1'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp47/B_1_in_context.xdc] for cell 'cam/BIAS_1'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp49/mem2p_76800_8_in_context.xdc] for cell 'cam/memi'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp49/mem2p_76800_8_in_context.xdc] for cell 'cam/memi'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp49/mem2p_76800_8_in_context.xdc] for cell 'cam/memo'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp49/mem2p_76800_8_in_context.xdc] for cell 'cam/memo'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp51/image_in_in_context.xdc] for cell 'cam/Image_block'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp51/image_in_in_context.xdc] for cell 'cam/Image_block'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp53/P_W_in_context.xdc] for cell 'cam/Perceptron_W'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp53/P_W_in_context.xdc] for cell 'cam/Perceptron_W'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp55/P_B_in_context.xdc] for cell 'cam/Perceptron_B'
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp55/P_B_in_context.xdc] for cell 'cam/Perceptron_B'
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/constrs_1/imports/constraints/ZYBO_Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'CAMERA_PCLK_IBUF'. [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/constrs_1/imports/constraints/ZYBO_Master.xdc:179]
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/constrs_1/imports/constraints/ZYBO_Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/constrs_1/imports/constraints/ZYBO_Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/project_1/project_1.srcs/constrs_1/imports/constraints/ZYBO_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/dont_touch.xdc]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME==mem2p_76800_12 || ORIG_REF_NAME==mem2p_76800_12}'. [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/dont_touch.xdc:16]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME==mem2p_76800_24 || ORIG_REF_NAME==mem2p_76800_24}'. [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/dont_touch.xdc:19]
+Finished Parsing XDC File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/dont_touch.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/dont_touch.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1632.059 ; gain = 1.000 ; free physical = 7006 ; free virtual = 19323
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:47 . Memory (MB): peak = 1632.059 ; gain = 496.117 ; free physical = 7088 ; free virtual = 19405
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:47 . Memory (MB): peak = 1632.059 ; gain = 496.117 ; free physical = 7088 ; free virtual = 19405
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[10]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[10]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[11]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[11]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[12]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[12]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[13]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[13]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[14]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[14]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[3]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[3]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[4]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[4]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[5]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[5]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[6]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[6]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[7]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[7]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[8]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[8]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_addr[9]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_addr[9]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_ba[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_ba[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_ba[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_ba[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_ba[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_ba[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_cas_n. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_cas_n. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_cke. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_cke. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_cs_n. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_cs_n. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_ck_p. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_ck_p. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_ck_n. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_ck_n. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dm[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dm[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dm[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dm[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dm[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dm[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dm[3]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dm[3]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dqs_p[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dqs_p[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dqs_p[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dqs_p[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dqs_p[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dqs_p[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dqs_p[3]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dqs_p[3]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dqs_n[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dqs_n[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dqs_n[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dqs_n[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dqs_n[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dqs_n[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dqs_n[3]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dqs_n[3]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[10]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[10]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[11]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[11]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[12]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[12]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[13]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[13]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[14]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[14]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[15]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[15]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[16]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[16]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[17]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[17]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[18]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[18]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[19]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[19]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[20]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[20]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[21]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 98).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[21]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 99).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[22]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 100).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[22]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 101).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[23]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 102).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[23]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 103).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[24]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 104).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[24]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 105).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[25]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 106).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[25]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 107).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[26]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 108).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[26]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 109).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[27]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 110).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[27]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 111).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[28]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 112).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[28]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 113).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[29]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 114).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[29]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 115).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 116).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 117).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[30]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 118).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[30]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 119).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[31]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 120).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[31]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 121).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[3]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 122).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[3]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 123).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[4]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 124).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[4]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 125).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[5]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 126).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[5]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 127).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[6]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 128).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[6]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 129).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[7]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 130).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[7]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 131).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[8]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 132).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[8]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 133).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_dq[9]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 134).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_dq[9]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 135).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_reset_n. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 136).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_reset_n. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 137).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_odt. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 138).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_odt. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 139).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_ras_n. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 140).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_ras_n. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 141).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_ddr_vrn. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 142).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_ddr_vrn. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 143).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_ddr_vrp. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 144).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_ddr_vrp. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 145).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_0_we_n. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 146).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_0_we_n. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 147).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 148).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[0]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 149).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[10]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 150).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[10]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 151).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[11]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 152).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[11]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 153).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[12]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 154).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[12]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 155).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[13]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 156).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[13]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 157).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[14]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 158).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[14]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 159).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[15]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 160).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[15]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 161).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[16]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 162).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[16]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 163).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[17]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 164).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[17]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 165).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[18]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 166).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[18]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 167).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[19]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 168).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[19]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 169).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 170).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[1]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 171).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[20]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 172).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[20]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 173).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[21]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 174).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[21]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 175).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[22]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 176).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[22]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 177).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[23]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 178).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[23]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 179).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[24]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 180).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[24]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 181).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[25]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 182).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[25]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 183).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[26]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 184).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[26]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 185).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[27]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 186).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[27]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 187).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[28]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 188).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[28]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 189).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[29]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 190).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[29]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 191).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 192).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[2]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 193).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[30]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 194).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[30]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 195).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[31]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 196).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[31]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 197).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[32]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 198).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[32]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 199).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[33]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 200).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[33]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 201).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[34]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 202).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[34]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 203).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[35]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 204).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[35]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 205).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[36]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 206).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[36]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 207).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[37]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 208).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[37]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 209).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[38]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 210).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[38]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 211).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[39]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 212).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[39]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 213).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[3]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 214).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[3]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 215).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[40]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 216).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[40]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 217).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[41]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 218).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[41]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 219).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[42]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 220).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[42]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 221).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[43]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 222).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[43]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 223).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[44]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 224).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[44]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 225).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[45]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 226).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[45]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 227).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[46]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 228).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[46]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 229).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[47]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 230).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[47]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 231).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[48]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 232).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[48]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 233).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[49]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 234).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[49]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 235).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[4]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 236).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[4]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 237).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[50]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 238).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[50]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 239).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[51]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 240).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[51]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 241).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[52]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 242).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[52]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 243).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[53]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 244).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[53]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 245).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[5]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 246).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[5]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 247).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[6]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 248).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[6]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 249).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[7]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 250).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[7]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 251).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[8]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 252).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[8]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 253).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_mio[9]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 254).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_mio[9]. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 255).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_ps_clk. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 256).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_ps_clk. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 257).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_ps_porb. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 258).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_ps_porb. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 259).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_ps_srstb. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 260).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_ps_srstb. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp29/design_1_processing_system7_0_0_in_context.xdc, line 261).
+Applied set_property IO_BUFFER_TYPE = NONE for pl_clk. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp31/design_1_clk_wiz_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pl_clk. (constraint file  /tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/.Xil/Vivado-11637-ocaepc56/dcp31/design_1_clk_wiz_0_0_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for cam/BIAS_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cam/BIAS_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cam/BIAS_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cam/FILTER_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cam/FILTER_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cam/FILTER_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cam/Image_block. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cam/Perceptron_B. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cam/Perceptron_W. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cam/memi. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cam/memo. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:48 . Memory (MB): peak = 1632.059 ; gain = 496.117 ; free physical = 7089 ; free virtual = 19406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "vga_out[data][0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_out[data][0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_out[data][1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_out[data][1]" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:48 . Memory (MB): peak = 1632.059 ; gain = 496.117 ; free physical = 7080 ; free virtual = 19397
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   2 Input     31 Bit       Adders := 4     
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 16    
+	               17 Bit    Registers := 1     
+	                8 Bit    Registers := 17    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 20    
+	                1 Bit    Registers := 59    
++---Multipliers : 
+	                10x10  Multipliers := 2     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 4     
+	   2 Input     17 Bit        Muxes := 1     
+	   6 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 7     
+	   6 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 2     
+	   6 Input      8 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 12    
+	   4 Input      8 Bit        Muxes := 3     
+	   6 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module camera_capture 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   6 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   6 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 4     
+	   6 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 1     
+Module stream_RGB_to_Lum 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 22    
+Module display_synchro 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 1     
+Module display_VGA_memory_read 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 2     
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 6     
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 15    
+	                1 Bit    Registers := 18    
++---Multipliers : 
+	                10x10  Multipliers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+Module Zybo_CAM_VGA_Proc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 2     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                8 Bit    Registers := 9     
+	                1 Bit    Registers := 10    
++---Multipliers : 
+	                10x10  Multipliers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 11    
+	   4 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][10]' (FDR) to 'cam/cam/c_q_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][11]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][12]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][13]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][14]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][15]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][16]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][17]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][18]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][19]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][20]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][21]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][22]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][23]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][24]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][25]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][26]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][27]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][28]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][29]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][30]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[0][31]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cam/cam/\c_q_reg[1][9] )
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][10]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][11]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][12]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][13]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][14]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][15]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][16]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][17]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][18]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][19]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][20]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][21]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][22]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][23]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][24]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][25]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][26]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][27]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][28]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][29]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/cam/c_q_reg[1][30]' (FDR) to 'cam/cam/c_q_reg[1][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cam/cam/\c_q_reg[1][31] )
+INFO: [Synth 8-3886] merging instance 'cam/RGB2Lum/rgb_q_reg[data][0][0]' (FDR) to 'cam/RGB2Lum/rgb_q_reg[data][0][1]'
+INFO: [Synth 8-3886] merging instance 'cam/RGB2Lum/rgb_q_reg[data][1][0]' (FDR) to 'cam/RGB2Lum/rgb_q_reg[data][0][1]'
+INFO: [Synth 8-3886] merging instance 'cam/RGB2Lum/rgb_q_reg[data][2][0]' (FDR) to 'cam/RGB2Lum/rgb_q_reg[data][0][1]'
+INFO: [Synth 8-3886] merging instance 'cam/RGB2Lum/rgb_q_reg[data][0][1]' (FDR) to 'cam/RGB2Lum/rgb_q_reg[data][0][2]'
+INFO: [Synth 8-3886] merging instance 'cam/RGB2Lum/rgb_q_reg[data][1][1]' (FDR) to 'cam/RGB2Lum/rgb_q_reg[data][0][2]'
+INFO: [Synth 8-3886] merging instance 'cam/RGB2Lum/rgb_q_reg[data][2][1]' (FDR) to 'cam/RGB2Lum/rgb_q_reg[data][0][2]'
+INFO: [Synth 8-3886] merging instance 'cam/RGB2Lum/rgb_q_reg[data][0][2]' (FDR) to 'cam/RGB2Lum/rgb_q_reg[data][2][2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cam/RGB2Lum/\rgb_q_reg[data][2][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cam/camera_rst_reg)
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][10]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][11]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][12]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][13]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][14]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][15]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][16]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][17]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][18]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][19]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][20]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][21]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][22]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][23]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][24]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][25]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][26]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][27]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][28]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][29]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][30]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[0][31]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cam/rd/C_Sync/\sync_c_q_reg[1][10] )
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][11]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][12]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][13]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][14]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][15]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][16]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][17]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][18]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][19]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][20]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][21]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][22]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][23]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][24]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][25]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][26]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][27]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][28]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][29]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_c_q_reg[1][30]' (FDR) to 'cam/rd/C_Sync/sync_c_q_reg[1][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cam/rd/C_Sync/\sync_c_q_reg[1][31] )
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_reg[c][0][10]' (FDE) to 'cam/rd/C_Sync/sync_reg[c][0][11]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_reg[c][0][11]' (FDE) to 'cam/rd/C_Sync/sync_reg[c][0][12]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_reg[c][0][12]' (FDE) to 'cam/rd/C_Sync/sync_reg[c][0][13]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_reg[c][0][13]' (FDE) to 'cam/rd/C_Sync/sync_reg[c][0][14]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_reg[c][0][14]' (FDE) to 'cam/rd/C_Sync/sync_reg[c][0][15]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_reg[c][0][15]' (FDE) to 'cam/rd/C_Sync/sync_reg[c][0][16]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_reg[c][0][16]' (FDE) to 'cam/rd/C_Sync/sync_reg[c][0][17]'
+INFO: [Synth 8-3886] merging instance 'cam/rd/C_Sync/sync_reg[c][0][17]' (FDE) to 'cam/rd/C_Sync/sync_reg[c][0][18]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (first_pixel_q_reg) is unused and will be removed from module camera_capture.
+WARNING: [Synth 8-3332] Sequential element (c_q_reg[1][9]) is unused and will be removed from module camera_capture.
+WARNING: [Synth 8-3332] Sequential element (c_q_reg[1][31]) is unused and will be removed from module camera_capture.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][31]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][30]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][29]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][28]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][27]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][26]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][25]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][24]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][23]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][22]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][21]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][20]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][19]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][18]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][17]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][16]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][15]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][14]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][13]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][12]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][11]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][0][10]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][31]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][30]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][29]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][28]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][27]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][26]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][25]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][24]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][23]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][22]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][21]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][20]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][19]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][18]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][17]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][16]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][15]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][14]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][13]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][12]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][11]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][0][10]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][31]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][30]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][29]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][28]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][27]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][26]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][25]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][24]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][23]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][22]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][21]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][20]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][19]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][18]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][17]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][16]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][15]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][14]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][13]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][12]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][11]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][10]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[c][1][9]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][31]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][30]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][29]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][28]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][27]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][26]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][25]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][24]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][23]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][22]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][21]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][20]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][19]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][18]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][17]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][16]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][15]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][14]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][13]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][12]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][11]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][10]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[c][1][9]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[is_almost_full]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[is_almost_full]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[state][image_start]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[state][image_start]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[state][image_end]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (lum_out_reg[state][image_end]) is unused and will be removed from module stream_RGB_to_Lum.
+WARNING: [Synth 8-3332] Sequential element (rgb_q_reg[state][line_start]) is unused and will be removed from module stream_RGB_to_Lum.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:51 . Memory (MB): peak = 1632.059 ; gain = 496.117 ; free physical = 7045 ; free virtual = 19363
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/processing_system7_0/FCLK_CLK0' to pin 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/clk_out1' to pin 'design_1_i/clk_wiz_0/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:56 . Memory (MB): peak = 1632.059 ; gain = 496.117 ; free physical = 6923 ; free virtual = 19241
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:56 . Memory (MB): peak = 1632.059 ; gain = 496.117 ; free physical = 6921 ; free virtual = 19239
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:56 . Memory (MB): peak = 1632.059 ; gain = 496.117 ; free physical = 6921 ; free virtual = 19239
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:56 . Memory (MB): peak = 1632.059 ; gain = 496.117 ; free physical = 6921 ; free virtual = 19239
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:56 . Memory (MB): peak = 1632.059 ; gain = 496.117 ; free physical = 6921 ; free virtual = 19239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------------+--------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name             | RTL Name                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------------+--------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|display_VGA_memory_read | vga_out_reg[sync][Hsync] | 3      | 13    | NO           | NO                 | YES               | 13     | 0       | 
++------------------------+--------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------+----------+
+|      |BlackBox name                   |Instances |
++------+--------------------------------+----------+
+|1     |design_1_clk_wiz_0_0            |         1|
+|2     |design_1_processing_system7_0_0 |         1|
+|3     |mem2p_76800_8                   |         2|
+|4     |CNN_main_simple                 |         1|
+|5     |B_1                             |         1|
+|6     |B_2                             |         1|
+|7     |B_3                             |         1|
+|8     |F_1                             |         1|
+|9     |F_2                             |         1|
+|10    |F_3                             |         1|
+|11    |P_W                             |         1|
+|12    |P_B                             |         1|
+|13    |image_in                        |         1|
++------+--------------------------------+----------+
+
+Report Cell Usage: 
++------+-------------------------------------+------+
+|      |Cell                                 |Count |
++------+-------------------------------------+------+
+|1     |B_1_bbox                             |     1|
+|2     |B_2_bbox                             |     1|
+|3     |B_3_bbox                             |     1|
+|4     |CNN_main_simple_bbox                 |     1|
+|5     |F_1_bbox                             |     1|
+|6     |F_2_bbox                             |     1|
+|7     |F_3_bbox                             |     1|
+|8     |P_B_bbox                             |     1|
+|9     |P_W_bbox                             |     1|
+|10    |design_1_clk_wiz_0_0_bbox            |     1|
+|11    |design_1_processing_system7_0_0_bbox |     1|
+|12    |image_in_bbox                        |     1|
+|13    |mem2p_76800_8_bbox                   |     1|
+|14    |mem2p_76800_8_bbox_0                 |     1|
+|15    |BUFG                                 |     1|
+|16    |CARRY4                               |    73|
+|17    |LUT1                                 |   150|
+|18    |LUT2                                 |   123|
+|19    |LUT3                                 |    66|
+|20    |LUT4                                 |    27|
+|21    |LUT5                                 |    16|
+|22    |LUT6                                 |    53|
+|23    |MUXF7                                |     3|
+|24    |SRL16E                               |    13|
+|25    |FDRE                                 |   259|
+|26    |IBUF                                 |    17|
+|27    |IOBUF                                |     2|
+|28    |OBUF                                 |    23|
++------+-------------------------------------+------+
+
+Report Instance Areas: 
++------+-------------+------------------------+------+
+|      |Instance     |Module                  |Cells |
++------+-------------+------------------------+------+
+|1     |top          |                        |  1120|
+|2     |  design_1_i |design_1                |    14|
+|3     |  cam        |Zybo_CAM_VGA_Proc       |  1062|
+|4     |    cam      |camera_capture          |   119|
+|5     |    RGB2Lum  |stream_RGB_to_Lum       |    76|
+|6     |    rd       |display_VGA_memory_read |   391|
+|7     |      C_Sync |display_synchro         |   196|
++------+-------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:56 . Memory (MB): peak = 1632.059 ; gain = 496.117 ; free physical = 6921 ; free virtual = 19239
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 356 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1632.059 ; gain = 115.500 ; free physical = 6977 ; free virtual = 19295
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:56 . Memory (MB): peak = 1632.059 ; gain = 496.117 ; free physical = 6980 ; free virtual = 19297
+INFO: [Project 1-571] Translating synthesized netlist
+Parsing EDIF File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Catapult_CNN/Catapult_1/CNN_main_simple.v18/psr_vhdl_impl/CNN_main_simple.edf]
+Finished Parsing EDIF File [/tp-fmr/xph3sei710_Tamancoldi_Silveira/Catapult_CNN/Catapult_1/CNN_main_simple.v18/psr_vhdl_impl/CNN_main_simple.edf]
+INFO: [Netlist 29-17] Analyzing 278 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Precision RTL Synthesis  64-bit 2016.1.1.28
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 34 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 28 instances
+  INV => LUT1: 4 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+186 Infos, 155 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:01:23 . Memory (MB): peak = 1648.609 ; gain = 536.250 ; free physical = 6955 ; free virtual = 19272
+INFO: [Common 17-1381] The checkpoint '/tp-fmr/xph3sei710_Tamancoldi_Silveira/Vivado/CNN_CIFAR10/bitstream/synth_1/design_1_wrapper.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1673.621 ; gain = 0.000 ; free physical = 6953 ; free virtual = 19271
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 25 10:46:35 2019...

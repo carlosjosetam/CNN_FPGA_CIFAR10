@@ -1,0 +1,11 @@
+Inferred RAM
+------------
+  1. Instance: rtlcBLOCK_1R1W_RBW_mem_105_n0
+    File: /softl3/catapultc10_1b/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd , Net: mem, Type: single port
+    port 1  write
+    port 1  address width: 11
+    port 1  data width: 16
+    port 2  read
+    port 2  address width: 11
+    port 2  data width: 16
+

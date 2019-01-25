@@ -1,0 +1,23 @@
+//  Catapult University Version 10.1b/747384 (Production Release) Wed Nov  1 10:26:06 PDT 2017
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2017, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux xph3sei710@ocaepc56 3.16.0-4-amd64 x86_64 aol
+//  
+//  Package information: SIFLIBS v23.1_2.0, HLS_PKGS v23.1_0.0, 
+//                       DesignPad v2.78_1.0
+//  
+//  This version may only be used for academic purposes.  Some optimizations 
+//  are disabled, so results obtained from this version may be sub-optimal.
+//  
+if {[info script] != {} && [file isdirectory [file rootname [info script]]]} {
+  project load [file rootname [info script]] 10.1
+} elseif { [file isdirectory /tp-fmr/xph3sei710_Tamancoldi_Silveira/Catapult_CNN/Catapult_1] } {
+  project load /tp-fmr/xph3sei710_Tamancoldi_Silveira/Catapult_CNN/Catapult_1 10.1
+} else {
+  error {unable to locate project directory 'Catapult_1'}
+}
+

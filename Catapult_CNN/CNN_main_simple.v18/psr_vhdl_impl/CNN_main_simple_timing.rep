@@ -1,0 +1,413 @@
+//  Precision RTL Synthesis  64-bit 2016.1.1.28 (Production Release) Thu Sep  8 06:54:57 PDT 2016
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2016, All Rights Reserved.
+//             Portions copyright 1991-2008 Compuware Corporation
+//                       UNPUBLISHED, LICENSED SOFTWARE.
+//            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//          PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+//  
+//  Running on Linux xph3sei710@ocaepc56 #1 SMP Debian 3.16.43-2+deb8u2 (2017-06-26) 3.16.0-4-amd64 x86_64
+//  
+//  Start time Fri Jan 25 10:40:58 2019
+
+-- Device: Xilinx - ARTIX-7 : 7A50TCSG324 : 2L
+-- CTE report summary..
+-- POST-SYNTHESIS TIMING REPORTS ARE ESTIMATES AND SHOULD NOT BE RELIED ON TO MAKE QoR DECISIONS. For accurate timing information, please run place-and-route (P&R) and review P&R generated timing reports.
+
+================================================================================================
+                   Clock Frequency Report
+
+	Domain                  Clock Name                            Min Period (Freq)             Required Period (Freq)
+	------                  ----------                            -----------------             ----------------------
+	xmplr_ClockDomain_clk   clk                                   17.724 (56.421 MHz)           40.000 (25.000 MHz)
+
+
+================================================================================================
+Setup Timing Analysis of clk
+
+Setup Slack Path Summary
+
+                Data                                                                                               Data
+       Setup    Path   Source  Dest.   Data Start                                                                  End 
+Index  Slack   Delay   Clock   Clock       Pin                               Data End Pin                          Edge
+-----  ------  ------  ------  -----  -------------  ------------------------------------------------------------  ----
+  1    21.804  18.156  clk     clk    clk            CNN_main_simple_core_inst/reg_CR1_simple_aux_14_1_lpi_7(0)/D  Fall
+  2    22.276  15.554  clk     clk    F_2_rsc_q(15)  CNN_main_simple_core_inst/reg_CR1_simple_aux_14_1_lpi_7(0)/D  Fall
+  3    22.276  15.554  clk     clk    F_1_rsc_q(15)  CNN_main_simple_core_inst/reg_CR1_simple_aux_14_1_lpi_7(0)/D  Fall
+  4    22.276  15.554  clk     clk    F_3_rsc_q(15)  CNN_main_simple_core_inst/reg_CR1_simple_aux_14_1_lpi_7(0)/D  Fall
+  5    22.781  15.049  clk     clk    F_3_rsc_q(8)   CNN_main_simple_core_inst/reg_CR1_simple_aux_14_1_lpi_7(0)/D  Fall
+  6    22.781  15.049  clk     clk    F_3_rsc_q(2)   CNN_main_simple_core_inst/reg_CR1_simple_aux_14_1_lpi_7(0)/D  Fall
+  7    22.781  15.049  clk     clk    F_1_rsc_q(13)  CNN_main_simple_core_inst/reg_CR1_simple_aux_14_1_lpi_7(0)/D  Fall
+  8    22.781  15.049  clk     clk    F_1_rsc_q(5)   CNN_main_simple_core_inst/reg_CR1_simple_aux_14_1_lpi_7(0)/D  Fall
+  9    22.781  15.049  clk     clk    F_1_rsc_q(3)   CNN_main_simple_core_inst/reg_CR1_simple_aux_14_1_lpi_7(0)/D  Fall
+ 10    22.781  15.049  clk     clk    F_3_rsc_q(10)  CNN_main_simple_core_inst/reg_CR1_simple_aux_14_1_lpi_7(0)/D  Fall
+
+                  CTE Path Report
+
+
+Critical path #1, (path slack = 21.804):
+
+SOURCE CLOCK: name: clk period: 40.000000
+     Times are relative to the 1st rising edge
+  DEST CLOCK: name: clk period: 40.000000
+     Times are relative to the 2nd rising edge
+
+NAME                                                                                  GATE         DELAY    ARRIVAL DIR  FANOUT
+clk                                                                                (port)                   0.000   up
+clk                                                                                (net)          0.000                1044
+memory_1_rsc_comp_mem/memory_1_rsc_comp_mem_1/CLKBWRCLK                            RAMB36E1                 0.000   up
+memory_1_rsc_comp_mem/memory_1_rsc_comp_mem_1/DOBDO(15)                            RAMB36E1       1.846     1.846   up
+memory_1_rsc_comp_mem/rd_data2(15)                                                 (net)          1.156                  10
+CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/ix42219z1527/I1       LUT3                     3.002   up
+CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/ix42219z1527/O        LUT3           0.105     3.107   up
+CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx42219z1             (net)          1.156                  20
+CNN_main_simple_core_inst/DSP48E1_0/A(24)                                          DSP48E1                  4.263   up
+CNN_main_simple_core_inst/DSP48E1_0/P(13)                                          DSP48E1        3.230     7.493   up
+CNN_main_simple_core_inst/z_out_18_31_12(1)                                        (net)          0.578                   1
+CNN_main_simple_core_inst/ix19439z1320/I1                                          LUT2                     8.071   up
+CNN_main_simple_core_inst/ix19439z1320/O                                           LUT2           0.105     8.176   up
+CNN_main_simple_core_inst/nx19439z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_0/S                 MUXCY                    8.176   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_0/O                 MUXCY          0.409     8.585   up
+CNN_main_simple_core_inst/nx19438z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_1/CI                MUXCY                    8.585   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_1/O                 MUXCY          0.446     9.031   up
+CNN_main_simple_core_inst/nx19437z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_2/CI                MUXCY                    9.031   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_2/O                 MUXCY          0.446     9.477   up
+CNN_main_simple_core_inst/nx19436z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_3/CI                MUXCY                    9.477   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_3/O                 MUXCY          0.446     9.923   up
+CNN_main_simple_core_inst/nx19435z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_4/CI                MUXCY                    9.923   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_4/O                 MUXCY          0.446    10.369   up
+CNN_main_simple_core_inst/nx19434z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_5/CI                MUXCY                   10.369   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_5/O                 MUXCY          0.446    10.815   up
+CNN_main_simple_core_inst/nx19433z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_6/CI                MUXCY                   10.815   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_6/O                 MUXCY          0.446    11.261   up
+CNN_main_simple_core_inst/nx19432z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_7/CI                MUXCY                   11.261   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_7/O                 MUXCY          0.446    11.707   up
+CNN_main_simple_core_inst/nx19431z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_8/CI                MUXCY                   11.707   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_8/O                 MUXCY          0.446    12.153   up
+CNN_main_simple_core_inst/nx19430z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_9/CI                MUXCY                   12.153   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_9/O                 MUXCY          0.446    12.599   up
+CNN_main_simple_core_inst/nx19018z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_10/CI               MUXCY                   12.599   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_10/O                MUXCY          0.446    13.045   up
+CNN_main_simple_core_inst/nx19019z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_11/CI               MUXCY                   13.045   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_11/O                MUXCY          0.446    13.491   up
+CNN_main_simple_core_inst/nx19020z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_12/CI               MUXCY                   13.491   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_12/O                MUXCY          0.446    13.937   up
+CNN_main_simple_core_inst/nx19021z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_13/CI               MUXCY                   13.937   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_13/O                MUXCY          0.446    14.383   up
+CNN_main_simple_core_inst/nx19022z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_14/CI               MUXCY                   14.383   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_14/O                MUXCY          0.446    14.829   up
+CNN_main_simple_core_inst/nx19023z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_15/CI               MUXCY                   14.829   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_15/O                MUXCY          0.446    15.275   up
+CNN_main_simple_core_inst/nx19024z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_16/CI               MUXCY                   15.275   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_16/O                MUXCY          0.446    15.721   up
+CNN_main_simple_core_inst/nx19025z1                                                (net)          0.000                   2
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_17/CI               MUXCY                   15.721   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_muxcy_17/O                MUXCY          0.446    16.167   up
+CNN_main_simple_core_inst/nx3949z1                                                 (net)          0.000                   1
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_xorcy_18/CI               XORCY                   16.167   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1_add19_5_xorcy_18/O                XORCY          0.000    16.167   up
+CNN_main_simple_core_inst/FOR_B_if_acc_psp_sva_1(18)                               (net)          0.313                   4
+CNN_main_simple_core_inst/ix45236z23161/I0                                         LUT4                    16.480   up
+CNN_main_simple_core_inst/ix45236z23161/O                                          LUT4           0.105    16.585   dn
+CNN_main_simple_core_inst/nx45236z4                                                (net)          0.771                  30
+CNN_main_simple_core_inst/ix43222z23248/I1                                         LUT5                    17.356   dn
+CNN_main_simple_core_inst/ix43222z23248/O                                          LUT5           0.105    17.461   up
+CNN_main_simple_core_inst/nx43222z174                                              (net)          0.295                   1
+CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/ix61441z51494/I0      LUT4                    17.756   up
+CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/ix61441z51494/O       LUT4           0.105    17.861   dn
+CNN_main_simple_core_inst/CNN_main_simple_core_core_fsm_inst/nx61441z1             (net)          0.295                   1
+CNN_main_simple_core_inst/reg_CR1_simple_aux_14_1_lpi_7(0)/D                       FDRE                    18.156   dn
+
+		Initial edge separation:     40.000
+		Source clock delay:      -    0.000
+		Dest clock delay:        +    0.000
+		                        -----------
+		Edge separation:             40.000
+		Setup constraint:        -    0.040
+		                        -----------
+		Data required time:          39.960
+		Data arrival time:       -   18.156   ( 74.86% cell delay, 25.14% net delay )
+		                        -----------
+		Slack:                       21.804
+
+
+
+================================================================================================
+                   Input Delay Report
+
+	Input                  Clock Name                            Slack (ns)
+	-----                  ----------                            ----------
+	clk                    clk                                   21.804
+	F_1_rsc_q(15)          clk                                   22.276
+	F_2_rsc_q(15)          clk                                   22.276
+	F_3_rsc_q(15)          clk                                   22.276
+	F_1_rsc_q(14)          clk                                   22.781
+	F_1_rsc_q(13)          clk                                   22.781
+	F_1_rsc_q(12)          clk                                   22.781
+	F_1_rsc_q(11)          clk                                   22.781
+	F_1_rsc_q(10)          clk                                   22.781
+	F_1_rsc_q(9)           clk                                   22.781
+	F_1_rsc_q(8)           clk                                   22.781
+	F_1_rsc_q(7)           clk                                   22.781
+	F_1_rsc_q(6)           clk                                   22.781
+	F_1_rsc_q(5)           clk                                   22.781
+	F_1_rsc_q(4)           clk                                   22.781
+	F_1_rsc_q(3)           clk                                   22.781
+	F_1_rsc_q(2)           clk                                   22.781
+	F_1_rsc_q(1)           clk                                   22.781
+	F_1_rsc_q(0)           clk                                   22.781
+	F_2_rsc_q(14)          clk                                   22.781
+	F_2_rsc_q(13)          clk                                   22.781
+	F_2_rsc_q(12)          clk                                   22.781
+	F_2_rsc_q(11)          clk                                   22.781
+	F_2_rsc_q(10)          clk                                   22.781
+	F_2_rsc_q(9)           clk                                   22.781
+	F_2_rsc_q(8)           clk                                   22.781
+	F_2_rsc_q(7)           clk                                   22.781
+	F_2_rsc_q(6)           clk                                   22.781
+	F_2_rsc_q(5)           clk                                   22.781
+	F_2_rsc_q(4)           clk                                   22.781
+	F_2_rsc_q(3)           clk                                   22.781
+	F_2_rsc_q(2)           clk                                   22.781
+	F_2_rsc_q(1)           clk                                   22.781
+	F_2_rsc_q(0)           clk                                   22.781
+	F_3_rsc_q(14)          clk                                   22.781
+	F_3_rsc_q(13)          clk                                   22.781
+	F_3_rsc_q(12)          clk                                   22.781
+	F_3_rsc_q(11)          clk                                   22.781
+	F_3_rsc_q(10)          clk                                   22.781
+	F_3_rsc_q(9)           clk                                   22.781
+	F_3_rsc_q(8)           clk                                   22.781
+	F_3_rsc_q(7)           clk                                   22.781
+	F_3_rsc_q(6)           clk                                   22.781
+	F_3_rsc_q(5)           clk                                   22.781
+	F_3_rsc_q(4)           clk                                   22.781
+	F_3_rsc_q(3)           clk                                   22.781
+	F_3_rsc_q(2)           clk                                   22.781
+	F_3_rsc_q(1)           clk                                   22.781
+	F_3_rsc_q(0)           clk                                   22.781
+	image_rsc_q(15)        clk                                   22.830
+	P_W_rsc_q(15)          clk                                   22.830
+	image_rsc_q(14)        clk                                   23.335
+	image_rsc_q(13)        clk                                   23.335
+	image_rsc_q(12)        clk                                   23.335
+	image_rsc_q(11)        clk                                   23.335
+	image_rsc_q(10)        clk                                   23.335
+	image_rsc_q(9)         clk                                   23.335
+	image_rsc_q(8)         clk                                   23.335
+	image_rsc_q(7)         clk                                   23.335
+	image_rsc_q(6)         clk                                   23.335
+	image_rsc_q(5)         clk                                   23.335
+	image_rsc_q(4)         clk                                   23.335
+	image_rsc_q(3)         clk                                   23.335
+	image_rsc_q(2)         clk                                   23.335
+	image_rsc_q(1)         clk                                   23.335
+	image_rsc_q(0)         clk                                   23.335
+	P_W_rsc_q(14)          clk                                   23.335
+	P_W_rsc_q(13)          clk                                   23.335
+	P_W_rsc_q(12)          clk                                   23.335
+	P_W_rsc_q(11)          clk                                   23.335
+	P_W_rsc_q(10)          clk                                   23.335
+	P_W_rsc_q(9)           clk                                   23.335
+	P_W_rsc_q(8)           clk                                   23.335
+	P_W_rsc_q(7)           clk                                   23.335
+	P_W_rsc_q(6)           clk                                   23.335
+	P_W_rsc_q(5)           clk                                   23.335
+	P_W_rsc_q(4)           clk                                   23.335
+	P_W_rsc_q(3)           clk                                   23.335
+	P_W_rsc_q(2)           clk                                   23.335
+	P_W_rsc_q(1)           clk                                   23.335
+	P_W_rsc_q(0)           clk                                   23.335
+	P_B_rsc_q(15)          clk                                   37.430
+	P_B_rsc_q(14)          clk                                   37.430
+	P_B_rsc_q(13)          clk                                   37.430
+	P_B_rsc_q(12)          clk                                   37.430
+	P_B_rsc_q(11)          clk                                   37.430
+	P_B_rsc_q(10)          clk                                   37.430
+	P_B_rsc_q(9)           clk                                   37.430
+	P_B_rsc_q(8)           clk                                   37.430
+	P_B_rsc_q(7)           clk                                   37.430
+	P_B_rsc_q(6)           clk                                   37.430
+	P_B_rsc_q(5)           clk                                   37.430
+	P_B_rsc_q(4)           clk                                   37.430
+	B_1_rsc_q(15)          clk                                   37.830
+	B_1_rsc_q(14)          clk                                   37.830
+	B_1_rsc_q(13)          clk                                   37.830
+	B_1_rsc_q(12)          clk                                   37.830
+	B_1_rsc_q(11)          clk                                   37.830
+	B_1_rsc_q(10)          clk                                   37.830
+	B_1_rsc_q(9)           clk                                   37.830
+	B_1_rsc_q(8)           clk                                   37.830
+	B_1_rsc_q(7)           clk                                   37.830
+	B_1_rsc_q(6)           clk                                   37.830
+	B_1_rsc_q(5)           clk                                   37.830
+	B_1_rsc_q(4)           clk                                   37.830
+	B_1_rsc_q(3)           clk                                   37.830
+	B_1_rsc_q(2)           clk                                   37.830
+	B_1_rsc_q(1)           clk                                   37.830
+	B_2_rsc_q(15)          clk                                   37.830
+	B_2_rsc_q(14)          clk                                   37.830
+	B_2_rsc_q(13)          clk                                   37.830
+	B_2_rsc_q(12)          clk                                   37.830
+	B_2_rsc_q(11)          clk                                   37.830
+	B_2_rsc_q(10)          clk                                   37.830
+	B_2_rsc_q(9)           clk                                   37.830
+	B_2_rsc_q(8)           clk                                   37.830
+	B_2_rsc_q(7)           clk                                   37.830
+	B_2_rsc_q(6)           clk                                   37.830
+	B_2_rsc_q(5)           clk                                   37.830
+	B_2_rsc_q(4)           clk                                   37.830
+	B_2_rsc_q(3)           clk                                   37.830
+	B_2_rsc_q(2)           clk                                   37.830
+	B_2_rsc_q(1)           clk                                   37.830
+	B_3_rsc_q(15)          clk                                   37.830
+	B_3_rsc_q(14)          clk                                   37.830
+	B_3_rsc_q(13)          clk                                   37.830
+	B_3_rsc_q(12)          clk                                   37.830
+	B_3_rsc_q(11)          clk                                   37.830
+	B_3_rsc_q(10)          clk                                   37.830
+	B_3_rsc_q(9)           clk                                   37.830
+	B_3_rsc_q(8)           clk                                   37.830
+	B_3_rsc_q(7)           clk                                   37.830
+	B_3_rsc_q(6)           clk                                   37.830
+	B_3_rsc_q(5)           clk                                   37.830
+	B_3_rsc_q(4)           clk                                   37.830
+	B_3_rsc_q(3)           clk                                   37.830
+	B_3_rsc_q(2)           clk                                   37.830
+	B_3_rsc_q(1)           clk                                   37.830
+	rst                    clk                                   39.464
+	B_1_rsc_q(0)           clk                                   ------
+	B_2_rsc_q(0)           clk                                   ------
+	B_3_rsc_q(0)           clk                                   ------
+	P_B_rsc_q(3)           clk                                   ------
+	P_B_rsc_q(2)           clk                                   ------
+	P_B_rsc_q(1)           clk                                   ------
+	P_B_rsc_q(0)           clk                                   ------
+
+
+================================================================================================
+                   Output Delay Report
+
+	Output                 Clock Name                            Slack (ns)
+	------                 ----------                            ----------
+	F_3_rsc_radr(9)        clk                                   28.168
+	F_3_rsc_radr(7)        clk                                   28.168
+	F_3_rsc_radr(3)        clk                                   28.168
+	F_3_rsc_radr(2)        clk                                   28.168
+	F_3_rsc_re             clk                                   28.273
+	F_3_rsc_radr(12)       clk                                   28.586
+	F_3_rsc_radr(11)       clk                                   28.586
+	F_3_rsc_radr(10)       clk                                   28.586
+	F_3_rsc_radr(8)        clk                                   28.586
+	F_3_rsc_radr(6)        clk                                   28.586
+	F_3_rsc_radr(5)        clk                                   28.586
+	F_3_rsc_radr(4)        clk                                   28.586
+	F_3_rsc_radr(1)        clk                                   28.586
+	F_3_rsc_radr(0)        clk                                   28.586
+	P_B_rsc_re             clk                                   31.606
+	F_1_rsc_radr(10)       clk                                   31.722
+	F_1_rsc_radr(9)        clk                                   31.901
+	F_1_rsc_radr(8)        clk                                   32.308
+	P_B_rsc_radr(3)        clk                                   32.308
+	P_B_rsc_radr(0)        clk                                   32.308
+	image_rsc_radr(10)     clk                                   32.463
+	image_rsc_radr(9)      clk                                   32.602
+	P_B_rsc_radr(2)        clk                                   32.798
+	P_B_rsc_radr(1)        clk                                   32.798
+	F_1_rsc_radr(7)        clk                                   32.828
+	F_1_rsc_radr(6)        clk                                   32.859
+	image_rsc_radr(8)      clk                                   33.004
+	image_rsc_radr(7)      clk                                   33.445
+	image_rsc_radr(6)      clk                                   33.880
+	image_rsc_radr(5)      clk                                   34.344
+	image_rsc_re           clk                                   34.492
+	F_1_rsc_re             clk                                   34.492
+	B_2_rsc_radr(4)        clk                                   34.506
+	B_2_rsc_radr(3)        clk                                   34.506
+	B_2_rsc_radr(2)        clk                                   34.506
+	B_2_rsc_radr(1)        clk                                   34.506
+	B_2_rsc_radr(0)        clk                                   34.506
+	B_3_rsc_radr(4)        clk                                   34.506
+	B_3_rsc_radr(3)        clk                                   34.506
+	B_3_rsc_radr(2)        clk                                   34.506
+	B_3_rsc_radr(1)        clk                                   34.506
+	B_3_rsc_radr(0)        clk                                   34.506
+	B_1_rsc_re             clk                                   34.650
+	B_2_rsc_re             clk                                   34.650
+	B_3_rsc_re             clk                                   34.650
+	P_W_rsc_radr(10)       clk                                   34.701
+	image_rsc_radr(4)      clk                                   34.789
+	image_rsc_radr(3)      clk                                   34.789
+	image_rsc_radr(2)      clk                                   34.789
+	image_rsc_radr(1)      clk                                   34.789
+	image_rsc_radr(0)      clk                                   34.789
+	F_1_rsc_radr(5)        clk                                   34.789
+	F_1_rsc_radr(4)        clk                                   34.789
+	F_1_rsc_radr(3)        clk                                   34.789
+	F_1_rsc_radr(2)        clk                                   34.789
+	F_1_rsc_radr(1)        clk                                   34.789
+	F_1_rsc_radr(0)        clk                                   34.789
+	B_1_rsc_radr(5)        clk                                   34.945
+	B_1_rsc_radr(4)        clk                                   34.945
+	B_1_rsc_radr(3)        clk                                   34.945
+	B_1_rsc_radr(2)        clk                                   34.945
+	B_1_rsc_radr(1)        clk                                   34.945
+	B_1_rsc_radr(0)        clk                                   34.945
+	P_W_rsc_radr(9)        clk                                   35.147
+	P_W_rsc_radr(8)        clk                                   35.593
+	P_W_rsc_radr(7)        clk                                   36.039
+	F_2_rsc_radr(14)       clk                                   36.147
+	F_2_rsc_radr(13)       clk                                   36.147
+	F_2_rsc_radr(12)       clk                                   36.374
+	F_2_rsc_radr(11)       clk                                   36.428
+	F_2_rsc_radr(10)       clk                                   36.428
+	F_2_rsc_radr(9)        clk                                   36.428
+	F_2_rsc_radr(8)        clk                                   36.428
+	F_2_rsc_radr(7)        clk                                   36.428
+	F_2_rsc_radr(6)        clk                                   36.428
+	F_2_rsc_radr(5)        clk                                   36.428
+	F_2_rsc_radr(4)        clk                                   36.428
+	F_2_rsc_radr(3)        clk                                   36.428
+	F_2_rsc_radr(2)        clk                                   36.428
+	F_2_rsc_radr(1)        clk                                   36.428
+	F_2_rsc_radr(0)        clk                                   36.428
+	F_2_rsc_re             clk                                   36.428
+	P_W_rsc_radr(6)        clk                                   36.485
+	P_W_rsc_radr(5)        clk                                   36.931
+	P_W_rsc_radr(4)        clk                                   37.377
+	P_W_rsc_radr(3)        clk                                   37.780
+	P_W_rsc_radr(2)        clk                                   38.494
+	P_W_rsc_radr(1)        clk                                   38.494
+	P_W_rsc_radr(0)        clk                                   38.494
+	P_W_rsc_re             clk                                   38.599
+	image_rsc_triosy_lz    clk                                   39.283
+	F_1_rsc_triosy_lz      clk                                   39.283
+	B_1_rsc_triosy_lz      clk                                   39.283
+	F_2_rsc_triosy_lz      clk                                   39.283
+	B_2_rsc_triosy_lz      clk                                   39.283
+	F_3_rsc_triosy_lz      clk                                   39.283
+	B_3_rsc_triosy_lz      clk                                   39.283
+	P_W_rsc_triosy_lz      clk                                   39.283
+	P_B_rsc_triosy_lz      clk                                   39.283
+	index_rsc_triosy_lz    clk                                   39.283
+	index_rsc_dat(3)       clk                                   39.585
+	index_rsc_dat(2)       clk                                   39.585
+	index_rsc_dat(1)       clk                                   39.585
+	index_rsc_dat(0)       clk                                   39.585

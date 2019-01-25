@@ -1,0 +1,14 @@
+8:-out_dir
+106:/tp-fmr/xph3sei710_Tamancoldi_Silveira/Catapult_CNN/Catapult_1/CNN_main_simple.v18/psr_vhdl_impl//rtlc.out
+10:-pipe_flow
+2:-v
+70:/softslin/precision2016_1_1/Mgc_home/pkgs/rtlc_psr/rtlc/lib/unimacro.v
+2:-v
+79:/softslin/precision2016_1_1/Mgc_home/pkgs/rtlc_psr/rtlc/lib/xcv7_retarget_lib.v
+25:-comment_transoff_regions
+13:-lib_map_file
+106:/tp-fmr/xph3sei710_Tamancoldi_Silveira/Catapult_CNN/Catapult_1/CNN_main_simple.v18/psr_vhdl_impl//.jaguarc
+9:-override
+9:-keeplast
+135:+incdir+/softl3/catapultc10_1b/Mgc_home/pkgs/siflibs+/tp-fmr/xph3sei710_Tamancoldi_Silveira/Catapult_CNN/Catapult_1/CNN_main_simple.v18
+17:+define+synthesis
